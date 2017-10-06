@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="long-mes-pollute-pageModel:war">
+    <output-path>$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-pageModel/target</output-path>
+    <root id="archive" name="long-mes-pollute-pageModel.war">
+      <element id="artifact" artifact-name="long-mes-pollute-pageModel:war exploded" />
+    </root>
+  </artifact>
+</component>

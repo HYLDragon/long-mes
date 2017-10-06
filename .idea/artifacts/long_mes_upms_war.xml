@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="long-mes-upms:war">
+    <output-path>$PROJECT_DIR$/long-mes-upms/target</output-path>
+    <root id="archive" name="long-mes-upms.war">
+      <element id="artifact" artifact-name="long-mes-upms:war exploded" />
+    </root>
+  </artifact>
+</component>

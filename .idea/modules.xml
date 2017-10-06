@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/long-mes.iml" filepath="$PROJECT_DIR$/long-mes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-api/long-mes-activemq-api.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-api/long-mes-activemq-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-consumer/long-mes-activemq-consumer.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-consumer/long-mes-activemq-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-entity/long-mes-activemq-entity.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-entity/long-mes-activemq-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-provider/long-mes-activemq-provider.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-provider/long-mes-activemq-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-admin/long-mes-admin.iml" filepath="$PROJECT_DIR$/long-mes-admin/long-mes-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-common/long-mes-common.iml" filepath="$PROJECT_DIR$/long-mes-common/long-mes-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-common/long-mes-pollute-common.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-common/long-mes-pollute-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-dao/long-mes-pollute-dao.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-dao/long-mes-pollute-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-pageModel/long-mes-pollute-pageModel.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-pageModel/long-mes-pollute-pageModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-api/long-mes-pollute-rfc-api.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-api/long-mes-pollute-rfc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-service/long-mes-pollute-rfc-service.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-service/long-mes-pollute-rfc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-client/long-mes-upms-client.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-client/long-mes-upms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-common/long-mes-upms-common.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-common/long-mes-upms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-dao/long-mes-upms-dao.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-dao/long-mes-upms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-pageModel/long-mes-upms-pageModel.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-pageModel/long-mes-upms-pageModel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-rfc-api/long-mes-upms-rfc-api.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-rfc-api/long-mes-upms-rfc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-rfc-service/long-mes-upms-rfc-service.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-rfc-service/long-mes-upms-rfc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-server/long-mes-upms-server.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-server/long-mes-upms-server.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="long-mes-activemq-api" />
+        <module name="long-mes-activemq-consumer" />
+        <module name="long-mes-activemq-entity" />
+        <module name="long-mes-activemq-provider" />
+        <module name="long-mes-admin" />
+        <module name="long-mes-common" />
+        <module name="long-mes-pollute-common" />
+        <module name="long-mes-pollute-dao" />
+        <module name="long-mes-pollute-pageModel" />
+        <module name="long-mes-pollute-rfc-api" />
+        <module name="long-mes-pollute-rfc-service" />
+        <module name="long-mes-upms-client" />
+        <module name="long-mes-upms-common" />
+        <module name="long-mes-upms-dao" />
+        <module name="long-mes-upms-pageModel" />
+        <module name="long-mes-upms-rfc-api" />
+        <module name="long-mes-upms-rfc-service" />
+        <module name="long-mes-upms-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="long-admin" target="1.5" />
+      <module name="long-mes" target="1.5" />
+      <module name="long-mes-activemq" target="1.5" />
+      <module name="long-mes-activemq-api" target="1.5" />
+      <module name="long-mes-activemq-consumer" target="1.5" />
+      <module name="long-mes-activemq-entity" target="1.5" />
+      <module name="long-mes-activemq-provider" target="1.5" />
+      <module name="long-mes-admin" target="1.5" />
+      <module name="long-mes-common" target="1.5" />
+      <module name="long-mes-pollute" target="1.5" />
+      <module name="long-mes-pollute-common" target="1.5" />
+      <module name="long-mes-pollute-dao" target="1.5" />
+      <module name="long-mes-pollute-pageModel" target="1.5" />
+      <module name="long-mes-pollute-rfc-api" target="1.5" />
+      <module name="long-mes-pollute-rfc-service" target="1.5" />
+      <module name="long-mes-upms" target="1.5" />
+      <module name="long-mes-upms-client" target="1.5" />
+      <module name="long-mes-upms-common" target="1.5" />
+      <module name="long-mes-upms-dao" target="1.5" />
+      <module name="long-mes-upms-pageModel" target="1.5" />
+      <module name="long-mes-upms-rfc-api" target="1.5" />
+      <module name="long-mes-upms-rfc-service" target="1.5" />
+      <module name="long-mes-upms-server" target="1.5" />
+      <module name="longmespolluterfcservice" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>long-mes-pollute</artifactId>
+        <groupId>com.zx.mes.hyl</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>long-mes-pollute-rfc-api</artifactId>
+    <packaging>jar</packaging>
+    <name>long-mes-pollute-rfc-api Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.zx.mes.hyl</groupId>
+            <artifactId>long-mes-pollute-pageModel</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>long-mes-pollute-rfc-api</finalName>
+    </build>
+</project>

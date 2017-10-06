@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zx.mes.hyl</groupId>
+  <artifactId>long-mes</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>long-mes-activemq</module>
+    <module>long-mes-admin</module>
+    <module>long-mes-common</module>
+    <module>long-mes-pollute</module>
+    <module>long-mes-upms</module>
+  </modules>
+  <name>long-mes Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+
+  </dependencies>
+  <build>
+    <finalName>long-mes</finalName>
+  </build>
+</project>

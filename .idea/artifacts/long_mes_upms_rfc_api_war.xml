@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="long-mes-upms-rfc-api:war">
+    <output-path>$PROJECT_DIR$/long-mes-upms/long-mes-upms-rfc-api/target</output-path>
+    <root id="archive" name="long-mes-upms-rfc-api.war">
+      <element id="artifact" artifact-name="long-mes-upms-rfc-api:war exploded" />
+    </root>
+  </artifact>
+</component>

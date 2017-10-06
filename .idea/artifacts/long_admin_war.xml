@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="long-admin:war">
+    <output-path>$PROJECT_DIR$/long-admin/target</output-path>
+    <root id="archive" name="long-admin.war">
+      <element id="artifact" artifact-name="long-admin:war exploded" />
+    </root>
+  </artifact>
+</component>
