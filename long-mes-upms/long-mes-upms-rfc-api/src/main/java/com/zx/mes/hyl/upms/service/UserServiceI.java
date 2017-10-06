@@ -58,6 +58,14 @@ public interface UserServiceI {
 	public User get(String id);
 
 	/**
+	 * 获得用户对象
+	 *
+	 * @param userName
+	 * @return
+	 */
+	public User getByUserName(String userName);
+
+	/**
 	 * 编辑用户
 	 * 
 	 * @param user

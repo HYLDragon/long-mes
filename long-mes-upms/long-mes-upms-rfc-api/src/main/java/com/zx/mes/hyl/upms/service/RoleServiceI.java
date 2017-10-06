@@ -45,6 +45,14 @@ public interface RoleServiceI {
 	 */
 	public List<Role> treeGrid(SessionInfo sessionInfo);
 
+
+	/**
+	 * 获得角色List<Role>
+	 *
+	 * @return
+	 */
+	public List<Role> getRoles(String userId);
+
 	/**
 	 * 删除角色
 	 * 

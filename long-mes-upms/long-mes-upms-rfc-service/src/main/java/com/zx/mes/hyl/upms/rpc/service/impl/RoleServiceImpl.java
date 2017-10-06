@@ -163,6 +163,30 @@ public class RoleServiceImpl implements RoleServiceI {
 		return rl;
 	}
 
+	public List<Role> getRoles(String userId) {
+		List<Role> rl = new ArrayList<Role>();
+		List<Trole> tl = null;
+		Map<String, Object> params = new HashMap<String, Object>();
+		if (userId != null) {
+			params.put("userId", userId);// 查自己有权限的角色
+			tl = roleDao.find("select distinct t from Trole t left join fetch t.tresources resource join fetch t.tusers user where user.id = :userId order by t.seq", params);
+		} else {
+			tl = roleDao.find("select distinct t from Trole t left join fetch t.tresources resource order by t.seq");
+		}
+		if (tl != null && tl.size() > 0) {
+			for (Trole t : tl) {
+				Role r = new Role();
+				BeanUtils.copyProperties(t, r);
+				if (t.getTrole() != null) {
+					r.setPid(t.getTrole().getId());
+					r.setPname(t.getTrole().getName());
+				}
+				rl.add(r);
+			}
+		}
+		return rl;
+	}
+
 	public void delete(String id) {
 		Trole t = roleDao.get(Trole.class, id);
 		del(t);

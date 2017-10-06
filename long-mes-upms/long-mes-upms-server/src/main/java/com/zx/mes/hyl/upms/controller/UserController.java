@@ -13,6 +13,10 @@ import com.zx.mes.hyl.upms.service.RoleServiceI;
 import com.zx.mes.hyl.upms.service.UserServiceI;
 import com.zx.mes.hyl.util.ConfigUtil;
 import com.zx.mes.hyl.util.IpUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.apache.log4j.Logger;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,8 +35,11 @@ import java.util.UUID;
  * 
  */
 @Controller
+@Api(value = "用户管理",description = "用户管理")
 @RequestMapping("/userController")
 public class UserController extends BaseController {
+
+	private static final Logger logger=Logger.getLogger(UserController.class);
 
 	@Autowired
 	private UserServiceI userService;
@@ -52,6 +59,7 @@ public class UserController extends BaseController {
 	 * @param request
 	 * @return
 	 */
+	@ApiOperation(value = "登录")
 	@ResponseBody
 	@RequestMapping("/login")
 	public Json login(User user, HttpSession session, HttpServletRequest request) {
@@ -103,6 +111,7 @@ public class UserController extends BaseController {
 	 * @param session
 	 * @return
 	 */
+	@ApiOperation(value = "注册")
 	@ResponseBody
 	@RequestMapping("/logout")
 	public Json logout(HttpSession session) {
@@ -120,6 +129,7 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "用户管理页面")
 	@RequestMapping("/manager")
 	public String manager() {
 		return "/admin/user";
@@ -131,6 +141,8 @@ public class UserController extends BaseController {
 	 * @param user
 	 * @return
 	 */
+	@ApiOperation(value = "用户显示页面")
+	@RequiresPermissions("/userController/dataGrid")
 	@RequestMapping("/dataGrid")
 	@ResponseBody
 	public DataGrid dataGrid(User user, PageHelper ph) {
@@ -143,6 +155,8 @@ public class UserController extends BaseController {
 	 * @param request
 	 * @return
 	 */
+	@ApiOperation(value = "添加用户页面")
+	@RequiresPermissions("/userController/addPage")
 	@RequestMapping("/addPage")
 	public String addPage(HttpServletRequest request) {
 		User u = new User();
@@ -156,6 +170,8 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "添加用户功能")
+	@RequiresPermissions("/userController/add")
 	@RequestMapping("/add")
 	@ResponseBody
 	public Json add(User user) {
@@ -177,6 +193,8 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "编辑用户页面")
+	@RequiresPermissions("/userController/editPage")
 	@RequestMapping("/editPage")
 	public String editPage(HttpServletRequest request, String id) {
 		User u = userService.get(id);
@@ -190,6 +208,8 @@ public class UserController extends BaseController {
 	 * @param user
 	 * @return
 	 */
+	@ApiOperation(value = "编辑用户功能")
+	@RequiresPermissions("/userController/edit")
 	@RequestMapping("/edit")
 	@ResponseBody
 	public Json edit(User user) {
@@ -212,6 +232,8 @@ public class UserController extends BaseController {
 	 * @param id
 	 * @return
 	 */
+	@ApiOperation(value = "删除用户功能")
+	@RequiresPermissions("/userController/delete")
 	@RequestMapping("/delete")
 	@ResponseBody
 	public Json delete(String id, HttpSession session) {
@@ -232,6 +254,8 @@ public class UserController extends BaseController {
 	 *            ('0','1','2')
 	 * @return
 	 */
+	@ApiOperation(value = "批量删除用户功能")
+	@RequiresPermissions("/userController/batchDelete")
 	@RequestMapping("/batchDelete")
 	@ResponseBody
 	public Json batchDelete(String ids, HttpSession session) {
@@ -253,6 +277,8 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "用户授权页面")
+	@RequiresPermissions("/userController/grantPage")
 	@RequestMapping("/grantPage")
 	public String grantPage(String ids, HttpServletRequest request) {
 		request.setAttribute("ids", ids);
@@ -269,6 +295,8 @@ public class UserController extends BaseController {
 	 * @param ids
 	 * @return
 	 */
+	@ApiOperation(value = "用户授权功能")
+	@RequiresPermissions("/userController/grant")
 	@RequestMapping("/grant")
 	@ResponseBody
 	public Json grant(String ids, User user) {
@@ -286,6 +314,8 @@ public class UserController extends BaseController {
 	 * @param request
 	 * @return
 	 */
+	@ApiOperation(value = "编辑密码页面")
+	@RequiresPermissions("/userController/editPwdPage")
 	@RequestMapping("/editPwdPage")
 	public String editPwdPage(String id, HttpServletRequest request) {
 		User u = userService.get(id);
@@ -299,6 +329,8 @@ public class UserController extends BaseController {
 	 * @param user
 	 * @return
 	 */
+	@ApiOperation(value = "编辑密码功能")
+	@RequiresPermissions("/userController/editPwd")
 	@RequestMapping("/editPwd")
 	@ResponseBody
 	public Json editPwd(User user) {
@@ -314,6 +346,8 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "编辑自己密码页面")
+//	@RequiresPermissions("/userController/editPwdPage")
 	@RequestMapping("/editCurrentUserPwdPage")
 	public String editCurrentUserPwdPage() {
 		return "/src/main/webapp/user/userEditPwd";
@@ -326,6 +360,7 @@ public class UserController extends BaseController {
 	 * @param pwd
 	 * @return
 	 */
+	@ApiOperation(value = "编辑自己密码功能")
 	@RequestMapping("/editCurrentUserPwd")
 	@ResponseBody
 	public Json editCurrentUserPwd(HttpSession session, String oldPwd, String pwd) {
@@ -353,6 +388,8 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "显示用户角色页面")
+//	@RequiresPermissions("/userController/editPwdPage")
 	@RequestMapping("/currentUserRolePage")
 	public String currentUserRolePage(HttpServletRequest request, HttpSession session) {
 		SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
@@ -365,6 +402,7 @@ public class UserController extends BaseController {
 	 * 
 	 * @return
 	 */
+	@ApiOperation(value = "显示用户权限页面")
 	@RequestMapping("/currentUserResourcePage")
 	public String currentUserResourcePage(HttpServletRequest request, HttpSession session) {
 		SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
@@ -379,6 +417,7 @@ public class UserController extends BaseController {
 	 *            参数
 	 * @return
 	 */
+	@ApiOperation(value = "登录 loginCombobox")
 	@RequestMapping("/loginCombobox")
 	@ResponseBody
 	public List<User> loginCombobox(String q) {
@@ -392,6 +431,7 @@ public class UserController extends BaseController {
 	 * @param ph
 	 * @return
 	 */
+	@ApiOperation(value = "登录 loginCombogrid")
 	@RequestMapping("/loginCombogrid")
 	@ResponseBody
 	public DataGrid loginCombogrid(String q, PageHelper ph) {
