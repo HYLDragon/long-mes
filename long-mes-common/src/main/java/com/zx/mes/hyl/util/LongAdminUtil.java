@@ -21,14 +21,14 @@ public class LongAdminUtil implements InitializingBean,ServletContextAware{
     }
 
     public void setServletContext(ServletContext servletContext) {
-        logger.info(JSON.toJSONStringWithDateFormat("===== 开始解压long-admin =====","yyyy-MM-dd HH:mm:ss"));
-        String version=PropertiesFileUtil.getInstance().get("long-admin.version");
-        logger.info(JSON.toJSONStringWithDateFormat("long-admin.jar 版本: "+version,"yyyy-MM-dd HH:mm:ss"));
-        String jarPath=servletContext.getRealPath("/WEB-INF/lib/long-admin-" + version + ".jar");
-        logger.info(JSON.toJSONStringWithDateFormat("long-admin.jar 包路径: "+jarPath,"yyyy-MM-dd HH:mm:ss"));
-        String resources=servletContext.getRealPath("/") + "/resources/long-admin";
-        logger.info(JSON.toJSONStringWithDateFormat("long-admin.jar 解压到: "+resources,"yyyy-MM-dd HH:mm:ss"));
+        logger.info(JSON.toJSONStringWithDateFormat("===== 开始解压long-mes-admin =====","yyyy-MM-dd HH:mm:ss"));
+        String version=PropertiesFileUtil.getInstance().get("long-mes-admin.version");
+        logger.info(JSON.toJSONStringWithDateFormat("long-mes-admin.jar 版本: "+version,"yyyy-MM-dd HH:mm:ss"));
+        String jarPath=servletContext.getRealPath("/WEB-INF/lib/long-mes-admin-"+version + ".jar");
+        logger.info(JSON.toJSONStringWithDateFormat("long-mes-admin.jar 包路径: "+jarPath,"yyyy-MM-dd HH:mm:ss"));
+        String resources=servletContext.getRealPath("/") + "/resources/long-mes-admin";
+        logger.info(JSON.toJSONStringWithDateFormat("long-mes-admin.jar 解压到: "+resources,"yyyy-MM-dd HH:mm:ss"));
         JarUtil.decompress(jarPath,resources);
-        logger.info(JSON.toJSONStringWithDateFormat("===== 解压long-admin完成 =====","yyyy-MM-dd HH:mm:ss"));
+        logger.info(JSON.toJSONStringWithDateFormat("===== 解压long-mes-admin完成 =====","yyyy-MM-dd HH:mm:ss"));
     }
 }

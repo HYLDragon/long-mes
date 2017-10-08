@@ -23,6 +23,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="long-mes-upms-rfc-api" />
+    <orderEntry type="module" module-name="long-mes-upms-dao" />
     <orderEntry type="module" module-name="long-mes-upms-pageModel" />
     <orderEntry type="module" module-name="long-mes-common" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
@@ -149,5 +150,6 @@
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.mapstruct:mapstruct:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.7.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jasig.cas.client:cas-client-core:3.4.1" level="project" />
   </component>
 </module>
