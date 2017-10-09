@@ -1,0 +1,8 @@
+D:\keytool\
+keytool -genkey -alias tomcat -keyalg RSA -validity 3650 -keystore D:\keytool\tomcat.keystore
+
+keytool -list -keystore D:\keytool\tomcat.keystore
+
+keytool -export -alias tomcat -file D:\keytool\tomcat.cer -keystore D:\keytool\tomcat.keystore -validity 36500
+
+keytool -import -keystore cacerts -file D:\keytool\tomcat.cer -alias tomcat -storepass changeit

@@ -14,7 +14,7 @@ public class UpmsRpcServiceApplication {
 
     public static void main(String[] args){
         logger.info(JSON.toJSONStringWithDateFormat(">>>>> mes-upms-rpc-service 正在启动 <<<<<","yyyy-MM-dd HH:mm:ss"));
-        new ClassPathXmlApplicationContext("classpath:META-INF/spring/*.xml");
+        new ClassPathXmlApplicationContext("classpath:spring/root.xml");
         logger.info(JSON.toJSONStringWithDateFormat(">>>>> mes-upms-rpc-service 启动完成 <<<<<","yyyy-MM-dd HH:mm:ss"));
     }
 }

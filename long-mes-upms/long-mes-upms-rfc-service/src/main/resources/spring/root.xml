@@ -23,5 +23,5 @@
 
 	<import resource="classpath:/spring/spring-ehcache.xml"/>
 
-	<!--<import resource="classpath:/dubbo/dubbo-authority-provider.xml"/>-->
+	<import resource="classpath:/dubbo/dubbo-authority-provider.xml"/>
 </beans>

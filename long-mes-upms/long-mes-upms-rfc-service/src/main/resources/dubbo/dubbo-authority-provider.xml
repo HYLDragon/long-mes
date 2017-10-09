@@ -12,10 +12,10 @@
 
 
 	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="demo-authority-provider"  />
+	<dubbo:application name="dubbo-authority-provider"  />
 
 	<!-- Zookeeper单机配置: -->
-	<dubbo:registry address="zookeeper://10.30.90.62:2181" />
+	<dubbo:registry address="zookeeper://127.0.0.1:2181" />
 
 	<!--Zookeeper集群配置：-->
 	<!--<dubbo:registry address="zookeeper://10.20.153.10:2181?backup=10.20.153.11:2181,10.20.153.12:2181" />-->
