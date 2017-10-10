@@ -35,7 +35,7 @@
       <module name="long-mes-activemq-entity" target="1.5" />
       <module name="long-mes-activemq-provider" target="1.5" />
       <module name="long-mes-admin" target="1.5" />
-      <module name="long-mes-common" target="1.5" />
+      <module name="long-mes-common" target="1.8" />
       <module name="long-mes-pollute" target="1.5" />
       <module name="long-mes-pollute-common" target="1.5" />
       <module name="long-mes-pollute-dao" target="1.5" />

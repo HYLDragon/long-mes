@@ -65,7 +65,8 @@
 <script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/extEasyUI.js?v=201305241044" charset="utf-8"></script>
 
 <!-- 扩展EasyUI Icon -->
-<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/style/extEasyUIIcon.css?v=201305301906" type="text/css">
+<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/style/extEasyUIIcon.css?v=201305301906"
+      type="text/css">
 
 <!-- 扩展jQuery -->
 <script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/extJquery.js?v=201305301341" charset="utf-8"></script>

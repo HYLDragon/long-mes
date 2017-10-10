@@ -80,7 +80,9 @@ public class FastJsonHttpMessageConverter extends AbstractHttpMessageConverter<O
 			} else {
 				text = JSON.toJSONString(obj, SerializerFeature.WriteDateUseDateFormat);
 			}
-			bytes = text.getBytes(charset);
+			//bytes = text.getBytes(charset);
+			bytes=text.getBytes(charset);
+
 		}
 
 		out.write(bytes);

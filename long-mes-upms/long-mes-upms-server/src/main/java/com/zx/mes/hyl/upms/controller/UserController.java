@@ -35,7 +35,7 @@ import java.util.UUID;
  * 
  */
 @Controller
-@Api(value = "用户管理",description = "用户管理")
+//@Api(value = "用户管理",description = "用户管理")
 @RequestMapping("/userController")
 public class UserController extends BaseController {
 
@@ -417,7 +417,7 @@ public class UserController extends BaseController {
 	 *            参数
 	 * @return
 	 */
-	@ApiOperation(value = "登录 loginCombobox")
+	//@ApiOperation(value = "登录 loginCombobox")
 	@RequestMapping("/loginCombobox")
 	@ResponseBody
 	public List<User> loginCombobox(String q) {
@@ -431,7 +431,7 @@ public class UserController extends BaseController {
 	 * @param ph
 	 * @return
 	 */
-	@ApiOperation(value = "登录 loginCombogrid")
+	//@ApiOperation(value = "登录 loginCombogrid")
 	@RequestMapping("/loginCombogrid")
 	@ResponseBody
 	public DataGrid loginCombogrid(String q, PageHelper ph) {
