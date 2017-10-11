@@ -60,10 +60,10 @@ public interface UserServiceI {
 	/**
 	 * 获得用户对象
 	 *
-	 * @param userName
+	 * @param name
 	 * @return
 	 */
-	public User getByUserName(String userName);
+	public User getByUserName(String name);
 
 	/**
 	 * 编辑用户

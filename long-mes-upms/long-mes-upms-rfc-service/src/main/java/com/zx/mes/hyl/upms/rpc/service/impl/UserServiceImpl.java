@@ -176,10 +176,10 @@ public class UserServiceImpl implements UserServiceI {
 		return u;
 	}
 
-	public User getByUserName(String userName) {
+	public User getByUserName(String name) {
 		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("name", userName);
-		Tuser t = userDao.get("select distinct t from Tuser t  where t.name = :userName", params);
+		params.put("name", name);
+		Tuser t = userDao.get("select distinct t from Tuser t  where t.name = :name", params);
 		User u = new User();
 		BeanUtils.copyProperties(t, u);
 		return u;

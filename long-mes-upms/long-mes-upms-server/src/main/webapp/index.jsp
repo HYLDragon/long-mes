@@ -111,8 +111,8 @@
 </head>
 <body>
 
-	<jsp:include page="user/login.jsp"></jsp:include>
-	<jsp:include page="user/reg.jsp"></jsp:include>
+	<%--<jsp:include page="user/login.jsp"></jsp:include>--%>
+	<%--<jsp:include page="user/reg.jsp"></jsp:include>--%>
 
 	<div id="index_layout">
 		<div data-options="region:'north',href:'${pageContext.request.contextPath}/layout/north.jsp'" style="height: 70px; overflow: hidden;" class="logo"></div>
@@ -137,6 +137,7 @@
 		<div title="closeOther" data-options="iconCls:'delete'">关闭其他</div>
 		<div title="closeAll" data-options="iconCls:'delete'">关闭所有</div>
 	</div>
-
+	<jsp:include page="user/login.jsp"></jsp:include>
+	<jsp:include page="user/reg.jsp"></jsp:include>
 </body>
 </html>

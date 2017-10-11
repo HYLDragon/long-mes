@@ -73,36 +73,40 @@ public class UpmsRealm extends AuthorizingRealm {
         return simpleAuthorizationInfo;
     }
 
-    /**
-     * 认证：登录时调用
-     * @param authenticationToken
-     * @return
-     * @throws AuthenticationException
-     */
-    @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
-        String username = (String) authenticationToken.getPrincipal();
-        String password = new String((char[]) authenticationToken.getCredentials());
-        // client无密认证
-        String upmsType = PropertiesFileUtil.getInstance("long-upms-client").get("upms.type");
-        if ("client".equals(upmsType)) {
-            return new SimpleAuthenticationInfo(username, password, getName());
-        }
-
-        // 查询用户信息
-        User upmsUser = userService.getByUserName(username);
-
-        if (null == upmsUser) {
-            throw new UnknownAccountException();
-        }
-        if (!upmsUser.getPwd().equals(MD5Util.md5(password ))) {
-            throw new IncorrectCredentialsException();
-        }
-//        if (upmsUser.getLocked() == 1) {
-//            throw new LockedAccountException();
-//        }
-
-        return new SimpleAuthenticationInfo(username, password, getName());
+        return null;
     }
+
+//    /**
+//     * 认证：登录时调用
+//     * @param authenticationToken
+//     * @return
+//     * @throws AuthenticationException
+//     */
+//    @Override
+//    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+//        String username = (String) authenticationToken.getPrincipal();
+//        String password = new String((char[]) authenticationToken.getCredentials());
+//        // client无密认证
+//        String upmsType = PropertiesFileUtil.getInstance("long-upms-client").get("upms.type");
+//        if ("client".equals(upmsType)) {
+//            return new SimpleAuthenticationInfo(username, password, getName());
+//        }
+//
+//        // 查询用户信息
+//        User upmsUser = userService.getByUserName(username);
+//
+//        if (null == upmsUser) {
+//            throw new UnknownAccountException();
+//        }
+//        if (!upmsUser.getPwd().equals(MD5Util.md5(password ))) {
+//            throw new IncorrectCredentialsException();
+//        }
+////        if (upmsUser.getLocked() == 1) {
+////            throw new LockedAccountException();
+////        }
+//
+//        return new SimpleAuthenticationInfo(username, password, getName());
+//    }
 
 }

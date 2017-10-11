@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSON;
 import com.zx.mes.hyl.pageModel.SessionInfo;
 import com.zx.mes.hyl.util.ConfigUtil;
 import org.apache.log4j.Logger;
@@ -57,11 +58,13 @@ public class SecurityInterceptor implements HandlerInterceptor {
 		String requestUri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String url = requestUri.substring(contextPath.length());
-		// logger.info(url);
+		logger.info(JSON.toJSONStringWithDateFormat("拦截的URL: "+url,"yyyy-MM-dd HH:mm:ss"));
 
 		if (url.indexOf("/baseController/") > -1 || excludeUrls.contains(url)) {// 如果要访问的资源是不需要验证的
 			return true;
 		}
+
+
 
 		SessionInfo sessionInfo = (SessionInfo) request.getSession().getAttribute(ConfigUtil.getSessionInfoName());
 		if (sessionInfo == null || sessionInfo.getId().equalsIgnoreCase("")) {// 如果没有登录或登录超时

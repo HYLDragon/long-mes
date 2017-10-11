@@ -50,11 +50,14 @@
 	};
 
 	function logoutFun(b) {
+//        top.location.href ='http://localhost:8080/logout',
 		$.getJSON('${pageContext.request.contextPath}/userController/logout', {
 			t : new Date()
 		}, function(result) {
 			if (b) {
-				location.replace('${pageContext.request.contextPath}/');
+				<%--location.replace('${pageContext.request.contextPath}/');--%>
+				location.replace('http://localhost:8080/logout');
+
 			} else {
 				$('#sessionInfoDiv').html('');
 				$('#loginDialog').dialog('open');
