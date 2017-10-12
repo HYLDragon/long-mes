@@ -133,9 +133,18 @@ public class UserController extends BaseController {
 	 * @param session
 	 * @return
 	 */
-	@ApiOperation(value = "注册")
+
 	@ResponseBody
 	@RequestMapping("/logout")
+	//public String logout(HttpSession session) {
+	//	//Json j = new Json();
+	//	if (session != null) {
+	//		session.invalidate();
+	//	}
+	//	//j.setSuccess(true);
+	//	//j.setMsg("注销成功！");
+	//	return "redirect:http://10.30.90.68:8080/logout";
+	//}
 	public Json logout(HttpSession session) {
 		Json j = new Json();
 		if (session != null) {

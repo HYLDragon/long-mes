@@ -51,12 +51,15 @@
 
 	function logoutFun(b) {
 //        top.location.href ='http://localhost:8080/logout',
+
+		<%--$.post('${pageContext.request.contextPath}/userController/logout');--%>
 		$.getJSON('${pageContext.request.contextPath}/userController/logout', {
 			t : new Date()
 		}, function(result) {
 			if (b) {
 				<%--location.replace('${pageContext.request.contextPath}/');--%>
-				location.replace('http://localhost:8080/logout');
+//				location.replace('http://localhost:8080/logout?service=http://10.30.90.68:8080');
+                top.location.href ='http://10.30.90.68:8080/logout?service=http://10.30.90.68:8081';
 
 			} else {
 				$('#sessionInfoDiv').html('');
