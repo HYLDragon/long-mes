@@ -28,6 +28,8 @@
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20880" />
 
+	<dubbo:provider timeout="5000" />
+
 	<!--<dubbo:annotation package="com.zx.mes.hyl.service" />-->
 	<!--<context:component-scan base-package="com.zx.mes.hyl"/>-->
 	<dubbo:service interface="com.zx.mes.hyl.upms.service.BugServiceI" ref="bugServiceImpl"/>

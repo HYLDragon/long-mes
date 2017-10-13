@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Component
@@ -33,6 +35,9 @@ public class InitServiceImpl implements InitServiceI {
 
 	@Autowired
 	private BugTypeDaoI bugTypeDao;
+
+	@Autowired
+	private SysDaoI sysDao;
 
 
 	synchronized public void init() {
@@ -65,12 +70,15 @@ public class InitServiceImpl implements InitServiceI {
 		Tresourcetype menuType = resourceTypeDao.get(Tresourcetype.class, "0");// 菜单类型
 		Tresourcetype funType = resourceTypeDao.get(Tresourcetype.class, "1");// 功能类型
 
+		Set sysSet=new HashSet();
+
 		Tresource xtgl = new Tresource();
 		xtgl.setId("xtgl");
 		xtgl.setName("系统管理");
 		xtgl.setTresourcetype(menuType);
 		xtgl.setSeq(0);
 		xtgl.setIcon("plugin");
+		sysSet.add(xtgl);
 		resourceDao.saveOrUpdate(xtgl);
 
 		Tresource zygl = new Tresource();
@@ -82,6 +90,7 @@ public class InitServiceImpl implements InitServiceI {
 		zygl.setUrl("/resourceController/manager");
 		zygl.setIcon("database_gear");
 		zygl.setRemark("管理系统中所有的菜单或功能");
+		sysSet.add(zygl);
 		resourceDao.saveOrUpdate(zygl);
 
 		Tresource zyglTreeGrid = new Tresource();
@@ -93,6 +102,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglTreeGrid.setUrl("/resourceController/treeGrid");
 		zyglTreeGrid.setIcon("wrench");
 		zyglTreeGrid.setRemark("显示资源列表");
+		sysSet.add(zyglTreeGrid);
 		resourceDao.saveOrUpdate(zyglTreeGrid);
 
 		Tresource zyglMenu = new Tresource();
@@ -103,6 +113,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglMenu.setSeq(2);
 		zyglMenu.setUrl("/resourceController/tree");
 		zyglMenu.setIcon("wrench");
+		sysSet.add(zyglMenu);
 		resourceDao.saveOrUpdate(zyglMenu);
 
 		Tresource zyglAddPage = new Tresource();
@@ -113,6 +124,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglAddPage.setSeq(3);
 		zyglAddPage.setUrl("/resourceController/addPage");
 		zyglAddPage.setIcon("wrench");
+		sysSet.add(zyglAddPage);
 		resourceDao.saveOrUpdate(zyglAddPage);
 
 		Tresource zyglAdd = new Tresource();
@@ -123,6 +135,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglAdd.setSeq(4);
 		zyglAdd.setUrl("/resourceController/add");
 		zyglAdd.setIcon("wrench");
+		sysSet.add(zyglAdd);
 		resourceDao.saveOrUpdate(zyglAdd);
 
 		Tresource zyglEditPage = new Tresource();
@@ -133,6 +146,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglEditPage.setSeq(5);
 		zyglEditPage.setUrl("/resourceController/editPage");
 		zyglEditPage.setIcon("wrench");
+		sysSet.add(zyglEditPage);
 		resourceDao.saveOrUpdate(zyglEditPage);
 
 		Tresource zyglEdit = new Tresource();
@@ -143,6 +157,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglEdit.setSeq(6);
 		zyglEdit.setUrl("/resourceController/edit");
 		zyglEdit.setIcon("wrench");
+		sysSet.add(zyglEdit);
 		resourceDao.saveOrUpdate(zyglEdit);
 
 		Tresource zyglDelete = new Tresource();
@@ -153,6 +168,7 @@ public class InitServiceImpl implements InitServiceI {
 		zyglDelete.setSeq(7);
 		zyglDelete.setUrl("/resourceController/delete");
 		zyglDelete.setIcon("wrench");
+		sysSet.add(zyglDelete);
 		resourceDao.saveOrUpdate(zyglDelete);
 
 		Tresource jsgl = new Tresource();
@@ -163,6 +179,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsgl.setSeq(2);
 		jsgl.setUrl("/roleController/manager");
 		jsgl.setIcon("tux");
+		sysSet.add(jsgl);
 		resourceDao.saveOrUpdate(jsgl);
 
 		Tresource jsglTreeGrid = new Tresource();
@@ -173,6 +190,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglTreeGrid.setSeq(1);
 		jsglTreeGrid.setUrl("/roleController/treeGrid");
 		jsglTreeGrid.setIcon("wrench");
+		sysSet.add(jsglTreeGrid);
 		resourceDao.saveOrUpdate(jsglTreeGrid);
 
 		Tresource jsglAddPage = new Tresource();
@@ -183,6 +201,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglAddPage.setSeq(2);
 		jsglAddPage.setUrl("/roleController/addPage");
 		jsglAddPage.setIcon("wrench");
+		sysSet.add(jsglAddPage);
 		resourceDao.saveOrUpdate(jsglAddPage);
 
 		Tresource jsglAdd = new Tresource();
@@ -193,6 +212,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglAdd.setSeq(3);
 		jsglAdd.setUrl("/roleController/add");
 		jsglAdd.setIcon("wrench");
+		sysSet.add(jsglAdd);
 		resourceDao.saveOrUpdate(jsglAdd);
 
 		Tresource jsglEditPage = new Tresource();
@@ -203,6 +223,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglEditPage.setSeq(4);
 		jsglEditPage.setUrl("/roleController/editPage");
 		jsglEditPage.setIcon("wrench");
+		sysSet.add(jsglEditPage);
 		resourceDao.saveOrUpdate(jsglEditPage);
 
 		Tresource jsglEdit = new Tresource();
@@ -213,6 +234,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglEdit.setSeq(5);
 		jsglEdit.setUrl("/roleController/edit");
 		jsglEdit.setIcon("wrench");
+		sysSet.add(jsglEdit);
 		resourceDao.saveOrUpdate(jsglEdit);
 
 		Tresource jsglDelete = new Tresource();
@@ -223,6 +245,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglDelete.setSeq(6);
 		jsglDelete.setUrl("/roleController/delete");
 		jsglDelete.setIcon("wrench");
+		sysSet.add(jsglDelete);
 		resourceDao.saveOrUpdate(jsglDelete);
 
 		Tresource jsglGrantPage = new Tresource();
@@ -233,6 +256,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglGrantPage.setSeq(7);
 		jsglGrantPage.setUrl("/roleController/grantPage");
 		jsglGrantPage.setIcon("wrench");
+		sysSet.add(jsglGrantPage);
 		resourceDao.saveOrUpdate(jsglGrantPage);
 
 		Tresource jsglGrant = new Tresource();
@@ -243,6 +267,7 @@ public class InitServiceImpl implements InitServiceI {
 		jsglGrant.setSeq(8);
 		jsglGrant.setUrl("/roleController/grant");
 		jsglGrant.setIcon("wrench");
+		sysSet.add(jsglGrantPage);
 		resourceDao.saveOrUpdate(jsglGrant);
 
 		Tresource yhgl = new Tresource();
@@ -253,6 +278,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhgl.setSeq(3);
 		yhgl.setUrl("/userController/manager");
 		yhgl.setIcon("status_online");
+		sysSet.add(yhgl);
 		resourceDao.saveOrUpdate(yhgl);
 
 		Tresource yhglDateGrid = new Tresource();
@@ -263,6 +289,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglDateGrid.setSeq(1);
 		yhglDateGrid.setUrl("/userController/dataGrid");
 		yhglDateGrid.setIcon("wrench");
+		sysSet.add(yhglDateGrid);
 		resourceDao.saveOrUpdate(yhglDateGrid);
 
 		Tresource yhglAddPage = new Tresource();
@@ -273,6 +300,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglAddPage.setSeq(2);
 		yhglAddPage.setUrl("/userController/addPage");
 		yhglAddPage.setIcon("wrench");
+		sysSet.add(yhglAddPage);
 		resourceDao.saveOrUpdate(yhglAddPage);
 
 		Tresource yhglAdd = new Tresource();
@@ -283,6 +311,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglAdd.setSeq(3);
 		yhglAdd.setUrl("/userController/add");
 		yhglAdd.setIcon("wrench");
+		sysSet.add(yhglAdd);
 		resourceDao.saveOrUpdate(yhglAdd);
 
 		Tresource yhglEditPage = new Tresource();
@@ -293,6 +322,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglEditPage.setSeq(4);
 		yhglEditPage.setUrl("/userController/editPage");
 		yhglEditPage.setIcon("wrench");
+		sysSet.add(yhglEditPage);
 		resourceDao.saveOrUpdate(yhglEditPage);
 
 		Tresource yhglEdit = new Tresource();
@@ -303,6 +333,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglEdit.setSeq(5);
 		yhglEdit.setUrl("/userController/edit");
 		yhglEdit.setIcon("wrench");
+		sysSet.add(yhglEdit);
 		resourceDao.saveOrUpdate(yhglEdit);
 
 		Tresource yhglDelete = new Tresource();
@@ -313,6 +344,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglDelete.setSeq(6);
 		yhglDelete.setUrl("/userController/delete");
 		yhglDelete.setIcon("wrench");
+		sysSet.add(yhglDelete);
 		resourceDao.saveOrUpdate(yhglDelete);
 
 		Tresource yhglBatchDelete = new Tresource();
@@ -323,6 +355,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglBatchDelete.setSeq(7);
 		yhglBatchDelete.setUrl("/userController/batchDelete");
 		yhglBatchDelete.setIcon("wrench");
+		sysSet.add(yhglBatchDelete);
 		resourceDao.saveOrUpdate(yhglBatchDelete);
 
 		Tresource yhglGrantPage = new Tresource();
@@ -333,6 +366,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglGrantPage.setSeq(8);
 		yhglGrantPage.setUrl("/userController/grantPage");
 		yhglGrantPage.setIcon("wrench");
+		sysSet.add(yhglGrantPage);
 		resourceDao.saveOrUpdate(yhglGrantPage);
 
 		Tresource yhglGrant = new Tresource();
@@ -343,6 +377,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglGrant.setSeq(9);
 		yhglGrant.setUrl("/userController/grant");
 		yhglGrant.setIcon("wrench");
+		sysSet.add(yhglGrant);
 		resourceDao.saveOrUpdate(yhglGrant);
 
 		Tresource yhglEditPwdPage = new Tresource();
@@ -353,6 +388,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglEditPwdPage.setSeq(10);
 		yhglEditPwdPage.setUrl("/userController/editPwdPage");
 		yhglEditPwdPage.setIcon("wrench");
+		sysSet.add(yhglEditPwdPage);
 		resourceDao.saveOrUpdate(yhglEditPwdPage);
 
 		Tresource yhglEditPwd = new Tresource();
@@ -363,6 +399,7 @@ public class InitServiceImpl implements InitServiceI {
 		yhglEditPwd.setSeq(11);
 		yhglEditPwd.setUrl("/userController/editPwd");
 		yhglEditPwd.setIcon("wrench");
+		sysSet.add(yhglEditPwd);
 		resourceDao.saveOrUpdate(yhglEditPwd);
 
 		Tresource buggl = new Tresource();
@@ -373,6 +410,7 @@ public class InitServiceImpl implements InitServiceI {
 		buggl.setSeq(4);
 		buggl.setUrl("/bugController/manager");
 		buggl.setIcon("bug");
+		sysSet.add(buggl);
 		resourceDao.saveOrUpdate(buggl);
 
 		Tresource bugglDateGrid = new Tresource();
@@ -383,6 +421,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglDateGrid.setSeq(1);
 		bugglDateGrid.setUrl("/bugController/dataGrid");
 		bugglDateGrid.setIcon("bug_link");
+		sysSet.add(bugglDateGrid);
 		resourceDao.saveOrUpdate(bugglDateGrid);
 
 		Tresource bugglAddPage = new Tresource();
@@ -393,6 +432,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglAddPage.setSeq(2);
 		bugglAddPage.setUrl("/bugController/addPage");
 		bugglAddPage.setIcon("bug_add");
+		sysSet.add(bugglAddPage);
 		resourceDao.saveOrUpdate(bugglAddPage);
 
 		Tresource bugglAdd = new Tresource();
@@ -403,6 +443,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglAdd.setSeq(3);
 		bugglAdd.setUrl("/bugController/add");
 		bugglAdd.setIcon("bug_add");
+		sysSet.add(bugglAdd);
 		resourceDao.saveOrUpdate(bugglAdd);
 
 		Tresource bugglEditPage = new Tresource();
@@ -413,6 +454,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglEditPage.setSeq(4);
 		bugglEditPage.setUrl("/bugController/editPage");
 		bugglEditPage.setIcon("bug_edit");
+		sysSet.add(bugglEditPage);
 		resourceDao.saveOrUpdate(bugglEditPage);
 
 		Tresource bugglEdit = new Tresource();
@@ -423,6 +465,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglEdit.setSeq(5);
 		bugglEdit.setUrl("/bugController/edit");
 		bugglEdit.setIcon("bug_edit");
+		sysSet.add(bugglEdit);
 		resourceDao.saveOrUpdate(bugglEdit);
 
 		Tresource bugglDelete = new Tresource();
@@ -433,6 +476,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglDelete.setSeq(6);
 		bugglDelete.setUrl("/bugController/delete");
 		bugglDelete.setIcon("bug_delete");
+		sysSet.add(bugglDelete);
 		resourceDao.saveOrUpdate(bugglDelete);
 
 		Tresource bugglView = new Tresource();
@@ -443,6 +487,7 @@ public class InitServiceImpl implements InitServiceI {
 		bugglView.setSeq(7);
 		bugglView.setUrl("/bugController/view");
 		bugglView.setIcon("bug_link");
+		sysSet.add(bugglView);
 		resourceDao.saveOrUpdate(bugglView);
 
 		Tresource sjygl = new Tresource();
@@ -453,6 +498,7 @@ public class InitServiceImpl implements InitServiceI {
 		sjygl.setSeq(5);
 		sjygl.setUrl("/druidController/druid");
 		sjygl.setIcon("server_database");
+		sysSet.add(sjygl);
 		resourceDao.saveOrUpdate(sjygl);
 
 		Tresource wjgl = new Tresource();
@@ -463,6 +509,7 @@ public class InitServiceImpl implements InitServiceI {
 		wjgl.setSeq(6);
 		wjgl.setUrl("");
 		wjgl.setIcon("server_database");
+		sysSet.add(wjgl);
 		resourceDao.saveOrUpdate(wjgl);
 
 		Tresource wjglView = new Tresource();
@@ -473,6 +520,7 @@ public class InitServiceImpl implements InitServiceI {
 		wjglView.setSeq(1);
 		wjglView.setUrl("/fileController/fileManage");
 		wjglView.setIcon("server_database");
+		sysSet.add(wjglView);
 		resourceDao.saveOrUpdate(wjglView);
 
 		Tresource wjglUpload = new Tresource();
@@ -483,6 +531,7 @@ public class InitServiceImpl implements InitServiceI {
 		wjglUpload.setSeq(2);
 		wjglUpload.setUrl("/fileController/upload");
 		wjglUpload.setIcon("server_database");
+		sysSet.add(wjglUpload);
 		resourceDao.saveOrUpdate(wjglUpload);
 
 		Tresource chart = new Tresource();
@@ -491,6 +540,7 @@ public class InitServiceImpl implements InitServiceI {
 		chart.setTresourcetype(menuType);
 		chart.setSeq(7);
 		chart.setIcon("chart_bar");
+		sysSet.add(chart);
 		resourceDao.saveOrUpdate(chart);
 
 		Tresource userCreateDatetimeChart = new Tresource();
@@ -501,6 +551,7 @@ public class InitServiceImpl implements InitServiceI {
 		userCreateDatetimeChart.setSeq(1);
 		userCreateDatetimeChart.setIcon("chart_curve");
 		userCreateDatetimeChart.setTresource(chart);
+		sysSet.add(userCreateDatetimeChart);
 		resourceDao.saveOrUpdate(userCreateDatetimeChart);
 
 		Tresource jeasyuiApi = new Tresource();
@@ -510,108 +561,16 @@ public class InitServiceImpl implements InitServiceI {
 		jeasyuiApi.setUrl("http://jeasyui.com/documentation");
 		jeasyuiApi.setSeq(1000);
 		jeasyuiApi.setIcon("book");
+		sysSet.add(jeasyuiApi);
 		resourceDao.saveOrUpdate(jeasyuiApi);
 		
-		Tresource bargl = new Tresource();
-		bargl.setId("bargl");
-		bargl.setName("条码管理");
-		bargl.setTresourcetype(menuType);
-		bargl.setUrl("");
-		bargl.setSeq(100);
-		bargl.setIcon("book");
-		resourceDao.saveOrUpdate(bargl);
-		
-		Tresource barview = new Tresource();
-		barview.setId("barView");
-		barview.setName("条码");
-		barview.setTresourcetype(menuType);
-		barview.setUrl("/barController/view");
-		barview.setSeq(101);
-		barview.setIcon("book");
-		barview.setTresource(bargl);
-		resourceDao.saveOrUpdate(barview);
-		
-		Tresource barDataGrid = new Tresource();
-		barDataGrid.setId("barDataGrid");
-		barDataGrid.setName("条码表格");
-		barDataGrid.setTresourcetype(funType);
-		barDataGrid.setUrl("/barController/datagrid");
-		barDataGrid.setSeq(104);
-		barDataGrid.setIcon("book");
-		barDataGrid.setTresource(bargl);
-		resourceDao.saveOrUpdate(barDataGrid);
-		
-		Tresource repertorygl = new Tresource();
-		repertorygl.setId("repertorygl");
-		repertorygl.setName("库区");
-		repertorygl.setTresourcetype(menuType);
-		repertorygl.setUrl("");
-		repertorygl.setSeq(102);
-		repertorygl.setIcon("book");
-		resourceDao.saveOrUpdate(repertorygl);
-		
-		Tresource repertoryView = new Tresource();
-		repertoryView.setId("repertory");
-		repertoryView.setName("库区");
-		repertoryView.setTresourcetype(menuType);
-		repertoryView.setUrl("/repertoryController/datagrid");
-		repertoryView.setSeq(102);
-		repertoryView.setIcon("book");
-		repertoryView.setTresource(repertorygl);
-		resourceDao.saveOrUpdate(repertoryView);
-		
-		Tresource repertoryAddPage = new Tresource();
-		repertoryAddPage.setId("repertoryAddPage");
-		repertoryAddPage.setName("库区添加");
-		repertoryAddPage.setTresourcetype(funType);
-		repertoryAddPage.setUrl("/repertoryController/addPage");
-		repertoryAddPage.setSeq(103);
-		repertoryAddPage.setIcon("book");
-		repertoryAddPage.setTresource(repertorygl);
-		resourceDao.saveOrUpdate(repertoryAddPage);
-		
-		
-		Tresource repertoryEditPage = new Tresource();
-		repertoryEditPage.setId("repertoryEditPage");
-		repertoryEditPage.setName("库区编辑");
-		repertoryEditPage.setTresourcetype(funType);
-		repertoryEditPage.setUrl("/repertoryController/editPage");
-		repertoryEditPage.setSeq(104);
-		repertoryEditPage.setIcon("book");
-		repertoryEditPage.setTresource(repertorygl);
-		resourceDao.saveOrUpdate(repertoryEditPage);
-		
-		Tresource repertoryDeltePage = new Tresource();
-		repertoryDeltePage.setId("repertoryDeltePage");
-		repertoryDeltePage.setName("库区删除");
-		repertoryDeltePage.setTresourcetype(funType);
-		repertoryDeltePage.setUrl("/repertoryController/deletePage");
-		repertoryDeltePage.setSeq(105);
-		repertoryDeltePage.setIcon("book");
-		repertoryDeltePage.setTresource(repertorygl);
-		resourceDao.saveOrUpdate(repertoryDeltePage);
-		
-		
-		Tresource rfidgl = new Tresource();
-		rfidgl.setId("rfidgl");
-		rfidgl.setName("RFID管理");
-		rfidgl.setTresourcetype(menuType);
-		rfidgl.setUrl("");
-		rfidgl.setSeq(105);
-		rfidgl.setIcon("book");
-		resourceDao.saveOrUpdate(rfidgl);
-		
-		
-		Tresource rfidView = new Tresource();
-		rfidView.setId("rfidView");
-		rfidView.setName("RFID");
-		rfidView.setTresourcetype(menuType);
-		rfidView.setUrl("/rfidController/datagrid");
-		rfidView.setSeq(105);
-		rfidView.setIcon("book");
-		rfidView.setTresource(rfidgl);
-		resourceDao.saveOrUpdate(rfidView);
-		
+
+		Tsys tsys=new Tsys();
+		tsys.setId("10001");
+		tsys.setCode("10001");
+		tsys.setName("UPMS");
+		tsys.setTresources(sysSet);
+		sysDao.saveOrUpdate(tsys);
 		
 	}
 
@@ -686,13 +645,7 @@ public class InitServiceImpl implements InitServiceI {
 		roleDao.saveOrUpdate(barAdmin);
 		
 		
-		Trole rfidAdmin = new Trole();
-		rfidAdmin.setId("rfidAdmin");
-		rfidAdmin.setName("RFID相关管理员");
-		rfidAdmin.setTrole(superAdmin);// 父级是超管
-		rfidAdmin.setSeq(7);
-		rfidAdmin.getTresources().addAll(resourceDao.find("from Tresource t where t.tresource.id in ('rfidgl') or t.id in ('rfidgl')"));
-		roleDao.saveOrUpdate(rfidAdmin);
+
 
 		Trole guest = new Trole();
 		guest.setId("guest");

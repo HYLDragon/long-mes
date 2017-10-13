@@ -42,18 +42,21 @@ public class ResourceServiceImpl implements ResourceServiceI {
 
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("resourceTypeId", "0");// 菜单类型的资源
-
+		params.put("sysId", "10001");//系统类型(UPMS)
 		if (sessionInfo != null) {
 			params.put("userId", sessionInfo.getId());// 自查自己有权限的资源
 			l = resourceDao.find("select distinct t from Tresource t " +
 					"join fetch t.tresourcetype type " +
+					"join fetch t.tsys sys " +
 					"join fetch t.troles role " +
 					"join role.tusers user " +
-					"where type.id = :resourceTypeId and user.id = :userId order by t.seq", params);
+					"where type.id = :resourceTypeId and user.id = :userId  and sys.id= :sysId  order by t.seq",
+					params);
 		} else {
 			l = resourceDao.find("select distinct t from Tresource t " +
 					"join fetch t.tresourcetype type " +
-					"where type.id = :resourceTypeId order by t.seq", params);
+					"join fetch t.tsys sys " +
+					"where type.id = :resourceTypeId and sys.id= :sysId  order by t.seq", params);
 		}
 
 		if (l != null && l.size() > 0) {

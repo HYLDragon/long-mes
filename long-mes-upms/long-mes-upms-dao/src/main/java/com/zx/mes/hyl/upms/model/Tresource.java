@@ -18,13 +18,17 @@ public class Tresource implements java.io.Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private String id;
-	private Tresourcetype tresourcetype;
-	private Tresource tresource;
 	private String name;
 	private String remark;
 	private Integer seq;
 	private String url;
 	private String icon;
+	private Tresourcetype tresourcetype;
+	private Tresource tresource;
+
+	private Tsys tsys;
+
+
 	private Set<Trole> troles = new HashSet<Trole>(0);
 	private Set<Tresource> tresources = new HashSet<Tresource>(0);
 
@@ -37,7 +41,8 @@ public class Tresource implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Tresource(String id, Tresourcetype tresourcetype, Tresource tresource, String name, String remark, Integer seq, String url, String icon, Set<Trole> troles, Set<Tresource> tresources) {
+	public Tresource(String id, Tresourcetype tresourcetype, Tresource tresource, String name, String remark, Integer
+			seq, String url, String icon,Tsys tsys, Set<Trole> troles, Set<Tresource> tresources) {
 		this.id = id;
 		this.tresourcetype = tresourcetype;
 		this.tresource = tresource;
@@ -46,6 +51,7 @@ public class Tresource implements java.io.Serializable {
 		this.seq = seq;
 		this.url = url;
 		this.icon = icon;
+		this.tsys=tsys;
 		this.troles = troles;
 		this.tresources = tresources;
 	}
@@ -124,6 +130,17 @@ public class Tresource implements java.io.Serializable {
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "TSYS_ID", nullable = false)
+	public Tsys getTsys() {
+		return tsys;
+	}
+
+	public void setTsys(Tsys tsys) {
+		this.tsys = tsys;
+	}
+
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "trole_tresource", joinColumns = { @JoinColumn(name = "TRESOURCE_ID", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "TROLE_ID", nullable = false, updatable = false) })
