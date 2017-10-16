@@ -9,8 +9,8 @@
     <module>long-mes-activemq</module>
     <module>long-mes-admin</module>
     <module>long-mes-common</module>
-    <module>long-mes-pollute</module>
     <module>long-mes-upms</module>
+    <module>long-mes-pollute</module>
   </modules>
   <name>long-mes Maven Webapp</name>
   <url>http://maven.apache.org</url>

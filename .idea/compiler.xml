@@ -14,9 +14,11 @@
         <module name="long-mes-common" />
         <module name="long-mes-pollute-common" />
         <module name="long-mes-pollute-dao" />
+        <module name="long-mes-pollute-model" />
         <module name="long-mes-pollute-pageModel" />
         <module name="long-mes-pollute-rfc-api" />
         <module name="long-mes-pollute-rfc-service" />
+        <module name="long-mes-pollute-web" />
         <module name="long-mes-upms-client" />
         <module name="long-mes-upms-common" />
         <module name="long-mes-upms-dao" />
@@ -39,9 +41,11 @@
       <module name="long-mes-pollute" target="1.5" />
       <module name="long-mes-pollute-common" target="1.5" />
       <module name="long-mes-pollute-dao" target="1.5" />
+      <module name="long-mes-pollute-model" target="1.5" />
       <module name="long-mes-pollute-pageModel" target="1.5" />
       <module name="long-mes-pollute-rfc-api" target="1.5" />
       <module name="long-mes-pollute-rfc-service" target="1.5" />
+      <module name="long-mes-pollute-web" target="1.5" />
       <module name="long-mes-upms" target="1.5" />
       <module name="long-mes-upms-client" target="1.5" />
       <module name="long-mes-upms-common" target="1.5" />

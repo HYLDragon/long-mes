@@ -12,17 +12,14 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>long-mes-pollute-common</module>
-        <module>long-mes-pollute-dao</module>
+        <module>long-mes-pollute-model</module>
         <module>long-mes-pollute-pageModel</module>
+        <module>long-mes-pollute-dao</module>
         <module>long-mes-pollute-rfc-api</module>
         <module>long-mes-pollute-rfc-service</module>
+        <module>long-mes-pollute-web</module>
     </modules>
     <dependencies>
-        <dependency>
-            <groupId>com.zx.mes.hyl</groupId>
-            <artifactId>long-mes-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
 
     </dependencies>
     <build>

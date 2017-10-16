@@ -1,6 +1,7 @@
 package com.zx.mes.hyl.pollute.service;
 
-import com.zx.mes.hyl.pollute.model.TCaretype;
+
+import com.zx.mes.model.mes.CareType;
 
 import java.util.List;
 
@@ -13,5 +14,5 @@ public interface CareTypeServiceI {
     * 获取CareType列表
     * return list
     * */
-    public List<TCaretype> getCareTypeList();
+    public List<CareType> getCareTypeList();
 }

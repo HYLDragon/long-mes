@@ -12,7 +12,7 @@
 	<dubbo:application name="mes-upms-consumer"  />
 
 
-	<dubbo:consumer timeout="20000" />
+	<dubbo:consumer timeout="5000" />
 	<!--Zookeeper集群配置：-->
 	<!--<dubbo:registry address="zookeeper://10.20.153.10:2181?backup=10.20.153.11:2181,10.20.153.12:2181" />-->
 

@@ -6,7 +6,7 @@ package com.zx.mes.hyl.pageModel;
  * 
  * 用户后台向前台返回的JSON对象
  * 
- * @author 孙宇
+ * @author
  * 
  */
 public class Json implements java.io.Serializable {

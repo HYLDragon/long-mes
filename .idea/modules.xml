@@ -10,11 +10,14 @@
       <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-provider/long-mes-activemq-provider.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-provider/long-mes-activemq-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-admin/long-mes-admin.iml" filepath="$PROJECT_DIR$/long-mes-admin/long-mes-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-common/long-mes-common.iml" filepath="$PROJECT_DIR$/long-mes-common/long-mes-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-common/long-mes-pollute-common.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-common/long-mes-pollute-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-dao/long-mes-pollute-dao.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-dao/long-mes-pollute-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-model/long-mes-pollute-model.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-model/long-mes-pollute-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-pageModel/long-mes-pollute-pageModel.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-pageModel/long-mes-pollute-pageModel.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-api/long-mes-pollute-rfc-api.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-api/long-mes-pollute-rfc-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-service/long-mes-pollute-rfc-service.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-service/long-mes-pollute-rfc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-web/long-mes-pollute-web.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-web/long-mes-pollute-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-client/long-mes-upms-client.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-client/long-mes-upms-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-common/long-mes-upms-common.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-common/long-mes-upms-common.iml" />

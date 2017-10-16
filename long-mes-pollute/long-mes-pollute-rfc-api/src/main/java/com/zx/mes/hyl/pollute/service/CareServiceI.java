@@ -1,24 +1,24 @@
 package com.zx.mes.hyl.pollute.service;
 
-
 import com.zx.mes.hyl.pageModel.DataGrid;
 import com.zx.mes.hyl.pageModel.PageHelper;
-import com.zx.mes.hyl.pollute.pageModel.Care;
+import com.zx.mes.pageModel.mes.pollute.Pcare;
+
 
 /**
  * Created by Administrator on 2017/8/23.
  */
 public interface CareServiceI {
 
-     void add(Care care);
+    public void add(Pcare pcare);
 
-     void edit(Care care);
+    public void edit(Pcare pcare);
 
-     void delete(Care care);
+    public void delete(Pcare pcare);
 
-     DataGrid datagrid(Care care, PageHelper ph);
+    public DataGrid datagrid(Pcare pcare, PageHelper ph);
 
-     Care  get(String id);
+    public Pcare get(String id);
 
-     DataGrid propertyGrid();
+    DataGrid propertyGrid();
 }

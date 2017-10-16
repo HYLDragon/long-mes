@@ -7,9 +7,11 @@ import com.zx.mes.hyl.pageModel.Tree;
 
 import com.zx.mes.hyl.upms.dao.ResourceDaoI;
 import com.zx.mes.hyl.upms.dao.ResourceTypeDaoI;
+import com.zx.mes.hyl.upms.dao.SysDaoI;
 import com.zx.mes.hyl.upms.dao.UserDaoI;
 import com.zx.mes.hyl.upms.model.Tresource;
 import com.zx.mes.hyl.upms.model.Trole;
+import com.zx.mes.hyl.upms.model.Tsys;
 import com.zx.mes.hyl.upms.model.Tuser;
 import com.zx.mes.hyl.upms.pageModel.Resource;
 import com.zx.mes.hyl.upms.service.ResourceServiceI;
@@ -34,6 +36,9 @@ public class ResourceServiceImpl implements ResourceServiceI {
 
 	@Autowired
 	private UserDaoI userDao;
+
+	@Autowired
+	private SysDaoI sysDao;
 
 
 	public List<Tree> tree(SessionInfo sessionInfo) {
@@ -165,6 +170,11 @@ public class ResourceServiceImpl implements ResourceServiceI {
 		if (resource.getIconCls() != null && !resource.getIconCls().equalsIgnoreCase("")) {
 			t.setIcon(resource.getIconCls());
 		}
+
+		Tsys tsys=new Tsys();
+		tsys=sysDao.get(Tsys.class,"10002");
+		t.setTsys(tsys);
+
 		resourceDao.save(t);
 
 		// 由于当前用户所属的角色，没有访问新添加的资源权限，所以在新添加资源的时候，将当前资源授权给当前用户的所有角色，以便添加资源后在资源列表中能够找到

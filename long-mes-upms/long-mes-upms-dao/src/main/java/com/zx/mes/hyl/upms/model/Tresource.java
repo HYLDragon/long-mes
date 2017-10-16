@@ -132,7 +132,7 @@ public class Tresource implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "TSYS_ID", nullable = false)
+	@JoinColumn(name = "TSYS_ID")
 	public Tsys getTsys() {
 		return tsys;
 	}
