@@ -37,6 +37,16 @@ public interface ResourceServiceI {
 	public List<Tree> allTree(SessionInfo sessionInfo);
 
 	/**
+	 * 获得资源树(按模块包括所有资源类型)
+	 *
+	 * 通过用户ID判断，他能看到的资源
+	 *
+	 * @param sessionInfo
+	 * @return
+	 */
+	List<Tree> treeByTsys(SessionInfo sessionInfo);
+
+	/**
 	 * 获得资源列表
 	 * 
 	 * @param sessionInfo

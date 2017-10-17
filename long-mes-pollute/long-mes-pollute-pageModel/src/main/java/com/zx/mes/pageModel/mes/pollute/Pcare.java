@@ -2,12 +2,13 @@ package com.zx.mes.pageModel.mes.pollute;
 
 import com.zx.mes.model.mes.CareType;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Administrator on 2017/8/23.
  */
-public class Pcare {
+public class Pcare implements Serializable{
     private String id;
 
     private String name;

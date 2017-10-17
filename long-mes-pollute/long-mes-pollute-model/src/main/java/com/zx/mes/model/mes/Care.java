@@ -1,8 +1,9 @@
 package com.zx.mes.model.mes;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Care {
+public class Care implements Serializable{
     private String id;
 
     private String name;

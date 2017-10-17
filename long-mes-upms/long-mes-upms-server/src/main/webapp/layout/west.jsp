@@ -5,7 +5,7 @@
 	var layout_west_tree_url = '';
 	var sessionInfo_userId = '${sessionInfo.id}';
 	if (sessionInfo_userId) {
-		layout_west_tree_url = '${pageContext.request.contextPath}/resourceController/tree';
+		layout_west_tree_url = '${pageContext.request.contextPath}/resourceController/treeByTsys';
 	}
 	$(function() {
 		layout_west_tree = $('#layout_west_tree').tree({

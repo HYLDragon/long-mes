@@ -77,6 +77,16 @@ public class Tresource implements java.io.Serializable {
 	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "TSYS_ID", nullable = false)
+	public Tsys getTsys() {
+		return tsys;
+	}
+
+	public void setTsys(Tsys tsys) {
+		this.tsys = tsys;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "PID")
 	public Tresource getTresource() {
 		return this.tresource;
@@ -131,15 +141,7 @@ public class Tresource implements java.io.Serializable {
 		this.icon = icon;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "TSYS_ID")
-	public Tsys getTsys() {
-		return tsys;
-	}
 
-	public void setTsys(Tsys tsys) {
-		this.tsys = tsys;
-	}
 
 
 	@ManyToMany(fetch = FetchType.LAZY)

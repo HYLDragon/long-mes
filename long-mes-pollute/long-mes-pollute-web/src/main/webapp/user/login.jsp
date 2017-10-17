@@ -54,7 +54,7 @@
 					});
 				}
 				$('#loginDialog').dialog('close');
-				defaultUserInfoDialog.dialog('close');
+//				defaultUserInfoDialog.dialog('close');
 				$('#sessionInfoDiv').html($.formatString('[<strong>{0}</strong>]，欢迎你！您使用[<strong>{1}</strong>]IP登录！', result.obj.name, result.obj.ip));
 				//console.log("dialog close");
 			} else {

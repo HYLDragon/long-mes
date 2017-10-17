@@ -13,7 +13,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
-	<context:component-scan base-package="com.zx.mes.hyl.pollute.controller" />
+	<context:component-scan base-package="com.zx.mes.hyl.pollute.controller,com.zx.mes.hyl.controller" />
 	<!--加载dubbo文件-->
 	<import resource="classpath:/dubbo/dubbo-long-mes-pollute-consumer.xml"/>
 
@@ -50,7 +50,10 @@
 						<value>/initController/init</value><!-- 初始化数据库 -->
 						<value>/resourceController/tree</value><!-- 首页左侧功能菜单 -->
 						<value>/userController/reg</value><!-- 用户注册 -->
+						<value>/regController/reg</value><!-- 用户注册 -->
 						<value>/userController/login</value><!-- 用户登录 -->
+						<value>/loginController/login</value><!-- 用户登录 -->
+						<value>/loginController/logout</value><!-- 注销登录 -->
 						<value>/userController/loginCombobox</value><!-- 用户登录里面的autocomplete功能 -->
 						<value>/userController/loginCombogrid</value><!-- 用户登录里面的combogrid功能 -->
 						<value>/userController/logout</value><!-- 注销登录 -->

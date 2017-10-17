@@ -12,21 +12,21 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from CARETYPE
+    from
     where ID = #{id,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from CARETYPE
+    delete from caretype
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.zx.mes.model.mes.CareType">
-    insert into CARETYPE (ID, NAME, REMARK
+    insert into caretype (ID, NAME, REMARK
       )
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.zx.mes.model.mes.CareType">
-    insert into CARETYPE
+    insert into caretype
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         ID,
@@ -51,7 +51,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.zx.mes.model.mes.CareType">
-    update CARETYPE
+    update caretype
     <set>
       <if test="name != null">
         NAME = #{name,jdbcType=VARCHAR},
@@ -63,7 +63,7 @@
     where ID = #{id,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.zx.mes.model.mes.CareType">
-    update CARETYPE
+    update caretype
     set NAME = #{name,jdbcType=VARCHAR},
       REMARK = #{remark,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=VARCHAR}
@@ -73,7 +73,7 @@
   <select id="getAll" parameterType="com.zx.mes.model.mes.CareType" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from CARETYPE
+    from caretype
     where 1=1
     <if test="name !=null and name !=''">
       and name like #{name,jdbcType=VARCHAR}

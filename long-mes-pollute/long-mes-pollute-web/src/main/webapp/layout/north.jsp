@@ -53,7 +53,7 @@
 //        top.location.href ='http://localhost:8080/logout',
 
 		<%--$.post('${pageContext.request.contextPath}/userController/logout');--%>
-		$.getJSON('${pageContext.request.contextPath}/userController/logout', {
+		$.getJSON('${pageContext.request.contextPath}/loginController/logout', {
 			t : new Date()
 		}, function(result) {
 			if (b) {

@@ -81,28 +81,6 @@ public class UserController extends BaseController {
 		}
 		return j;
 	}
-	//@ApiOperation(value = "登录")
-	//@ResponseBody
-	//@RequestMapping("/login")
-	//public Json login(User user, HttpSession session, HttpServletRequest request) {
-	//	Json j = new Json();
-	//	User u = userService.login(user);
-	//	if (u != null) {
-	//		j.setSuccess(true);
-	//		j.setMsg("登陆成功！");
-    //
-	//		SessionInfo sessionInfo = new SessionInfo();
-	//		BeanUtils.copyProperties(u, sessionInfo);
-	//		sessionInfo.setIp(IpUtil.getIpAddr(request));
-	//		sessionInfo.setResourceList(userService.resourceList(u.getId()));
-	//		session.setAttribute(ConfigUtil.getSessionInfoName(), sessionInfo);
-	//
-	//		j.setObj(sessionInfo);
-	//	} else {
-	//		j.setMsg("用户名或密码错误！");
-	//	}
-	//	return j;
-	//}
 
 	/**
 	 * 用户注册
@@ -136,15 +114,6 @@ public class UserController extends BaseController {
 
 	@ResponseBody
 	@RequestMapping("/logout")
-	//public String logout(HttpSession session) {
-	//	//Json j = new Json();
-	//	if (session != null) {
-	//		session.invalidate();
-	//	}
-	//	//j.setSuccess(true);
-	//	//j.setMsg("注销成功！");
-	//	return "redirect:http://10.30.90.68:8080/logout";
-	//}
 	public Json logout(HttpSession session) {
 		Json j = new Json();
 		if (session != null) {

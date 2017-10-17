@@ -1,5 +1,6 @@
 package com.zx.mes.hyl.pollute.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.zx.mes.hyl.controller.BaseController;
 import com.zx.mes.hyl.pageModel.SessionInfo;
 import com.zx.mes.hyl.pageModel.Tree;
@@ -7,6 +8,8 @@ import com.zx.mes.hyl.upms.pageModel.Resource;
 import com.zx.mes.hyl.upms.service.ResourceServiceI;
 import com.zx.mes.hyl.upms.service.ResourceTypeServiceI;
 import com.zx.mes.hyl.util.ConfigUtil;
+import com.zx.mes.hyl.util.PropertiesFileUtil;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +35,8 @@ public class ResourceController extends BaseController {
 	@Autowired
 	private ResourceTypeServiceI resourceTypeService;
 
+	private static final Logger logger=Logger.getLogger(ResourceController.class);
+
 	/**
 	 * 获得资源树(资源类型为菜单类型)
 	 * 
@@ -44,7 +49,9 @@ public class ResourceController extends BaseController {
 	@ResponseBody
 	public List<Tree> tree(HttpSession session) {
 		SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
-		return resourceService.tree(sessionInfo);
+		sessionInfo.setSysId(PropertiesFileUtil.getInstance().get("long-mes-sys-id"));
+		logger.info(JSON.toJSONStringWithDateFormat("系统ID:"+sessionInfo.getSysId(),"yyyy-MM-dd HH:mm:ss"));
+		return resourceService.treeByTsys(sessionInfo);
 	}
 
 	/**

@@ -1,13 +1,9 @@
-package com.zx.mes.model.mes;
+package com.zx.mes.model.admin;
 
-import java.io.Serializable;
-
-public class CareType implements Serializable{
+public class ResourceType {
     private String id;
 
     private String name;
-
-    private String remark;
 
     public String getId() {
         return id;
@@ -23,13 +19,5 @@ public class CareType implements Serializable{
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
     }
 }

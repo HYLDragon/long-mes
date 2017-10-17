@@ -20,15 +20,15 @@
 <%--<!-- Skycons -->--%>
 <%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/skycons/skycons.js"></script>--%>
 <!-- Flot -->
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.js"></script>--%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.pie.js"></script>--%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.time.js"></script>--%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.stack.js"></script>--%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.resize.js"></script>--%>
-<%--<!-- Flot plugins --> --%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot.orderbars/js/jquery.flot.orderBars.js"></script>--%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot.curvedlines/curvedLines.js"></script>--%>
-<%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-spline/js/jquery.flot.spline.js"></script>--%>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.js"></script>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.pie.js"></script>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.time.js"></script>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.stack.js"></script>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-0.8.3/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot.curvedlines/curvedLines.js"></script>
+<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/flot-spline/js/jquery.flot.spline.js"></script>
 <!-- DateJS --> 
 <%--<!-- <script type="text/javascript" src="${pageContext.request.contextPath}/jslib/date-0.3.1/dist/date.js"></script> -->--%>
 <%--<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/Datejs/build/date.js"></script>--%>

@@ -47,7 +47,48 @@ public class ResourceServiceImpl implements ResourceServiceI {
 
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("resourceTypeId", "0");// 菜单类型的资源
-		params.put("sysId", "10001");//系统类型(UPMS)
+		//params.put("sysId", "10001");//系统类型(UPMS)
+		if (sessionInfo != null) {
+			params.put("userId", sessionInfo.getId());// 自查自己有权限的资源
+			l = resourceDao.find("select distinct t from Tresource t " +
+							"join fetch t.tresourcetype type " +
+							"join fetch t.tsys sys " +
+							"join fetch t.troles role " +
+							"join role.tusers user " +
+							"where type.id = :resourceTypeId and user.id = :userId    order by t.seq",
+					params);
+		} else {
+			l = resourceDao.find("select distinct t from Tresource t " +
+					"join fetch t.tresourcetype type " +
+					"join fetch t.tsys sys " +
+					"where type.id = :resourceTypeId order by t.seq", params);
+		}
+
+		if (l != null && l.size() > 0) {
+			for (Tresource r : l) {
+				Tree tree = new Tree();
+				BeanUtils.copyProperties(r, tree);
+				if (r.getTresource() != null) {
+					tree.setPid(r.getTresource().getId());
+				}
+				tree.setText(r.getName());
+				tree.setIconCls(r.getIcon());
+				Map<String, Object> attr = new HashMap<String, Object>();
+				attr.put("url", r.getUrl());
+				tree.setAttributes(attr);
+				lt.add(tree);
+			}
+		}
+		return lt;
+	}
+
+	public List<Tree> treeByTsys(SessionInfo sessionInfo) {
+		List<Tresource> l = null;
+		List<Tree> lt = new ArrayList<Tree>();
+
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("resourceTypeId", "0");// 菜单类型的资源
+		params.put("sysId", sessionInfo.getSysId());//系统类型(UPMS)
 		if (sessionInfo != null) {
 			params.put("userId", sessionInfo.getId());// 自查自己有权限的资源
 			l = resourceDao.find("select distinct t from Tresource t " +
@@ -171,9 +212,9 @@ public class ResourceServiceImpl implements ResourceServiceI {
 			t.setIcon(resource.getIconCls());
 		}
 
-		Tsys tsys=new Tsys();
-		tsys=sysDao.get(Tsys.class,"10002");
-		t.setTsys(tsys);
+		//Tsys tsys=new Tsys();
+		//tsys=sysDao.get(Tsys.class,"10002");
+		t.setTsys(sysDao.get(Tsys.class,"10002"));
 
 		resourceDao.save(t);
 

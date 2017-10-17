@@ -15,26 +15,26 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from CARE
+    from care
     where ID = #{id,jdbcType=VARCHAR}
   </select>
 
   <select id="get" parameterType="com.zx.mes.model.mes.Care" resultMap="BaseResultMap">
     select top 1
     <include refid="Base_Column_List" />
-    from CARE
+    from care
     WHERE 1=1
     <if test="caretypeId !=null and  caretypeId !=''">
-      and CARE.CARETYPE_ID = #{caretypeId,jdbcType=VARCHAR}
+      and care.CARETYPE_ID = #{caretypeId,jdbcType=VARCHAR}
     </if>
     ORDER BY CREATEDATETIME DESC
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from CARE
+    delete from care
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.zx.mes.model.mes.Care">
-    insert into CARE (ID, NAME, CREATEDATETIME, 
+    insert into care (ID, NAME, CREATEDATETIME,
       MODIFYDATETIME, REMARK, CARETYPE_ID
       )
     values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{createdatetime,jdbcType=TIMESTAMP}, 
@@ -42,7 +42,7 @@
       )
   </insert>
   <insert id="insertSelective" parameterType="com.zx.mes.model.mes.Care">
-    insert into CARE
+    insert into care
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         ID,
@@ -85,7 +85,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.zx.mes.model.mes.Care">
-    update CARE
+    update care
     <set>
       <if test="name != null">
         NAME = #{name,jdbcType=VARCHAR},
@@ -106,7 +106,7 @@
     where ID = #{id,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.zx.mes.model.mes.Care">
-    update CARE
+    update care
     set NAME = #{name,jdbcType=VARCHAR},
       CREATEDATETIME = #{createdatetime,jdbcType=TIMESTAMP},
       MODIFYDATETIME = #{modifydatetime,jdbcType=TIMESTAMP},
@@ -121,19 +121,19 @@
     select count(*) from care
     where 1=1
     <if test="createdatetime">
-      and CARE.CREATEDATETIME > #{createdatetime,jdbcType=TIMESTAMP}
+      and care.CREATEDATETIME > #{createdatetime,jdbcType=TIMESTAMP}
     </if>
     <if test="modifydatetime">
-      and CARE.CREATEDATETIME &lt;  #{modifydatetime,jdbcType=TIMESTAMP}
+      and care.CREATEDATETIME &lt;  #{modifydatetime,jdbcType=TIMESTAMP}
     </if>
     <if test="name !=null and name !=''">
-      and CARE.NAME LIKE #{name,jdbcType=VARCHAR}
+      and care.NAME LIKE #{name,jdbcType=VARCHAR}
     </if>
     <if test="id !=null">
-      and CARE.ID LIKE ={id,jdbcType=VARCHAR}
+      and care.ID LIKE ={id,jdbcType=VARCHAR}
     </if>
     <if test="caretypeId !=null and  caretypeId !=''">
-      and CARE.CARETYPE_ID = #{caretypeId,jdbcType=VARCHAR}
+      and care.CARETYPE_ID = #{caretypeId,jdbcType=VARCHAR}
     </if>
   </select>
 
@@ -146,32 +146,32 @@
     </association>
   </resultMap>
   <select id="getAllWithCareType" parameterType="com.zx.mes.model.mes.Care" resultMap="CareResultMap">
-    SELECT CARE.ID
-    ,CARE.NAME
-    ,CARE.CREATEDATETIME
-    ,CARE.MODIFYDATETIME
-    ,CARE.REMARK
-    ,CARE.CARETYPE_ID
-    ,CARETYPE.ID CARETYPEID
-    ,CARETYPE.NAME CARETYPE_NAME
-    ,CARETYPE.REMARK CARETYPE_REMARK
-    FROM CARE
-    LEFT JOIN CARETYPE ON CARETYPE.ID= CARE.CARETYPE_ID
+    SELECT care.ID
+    ,care.NAME
+    ,care.CREATEDATETIME
+    ,care.MODIFYDATETIME
+    ,care.REMARK
+    ,care.CARETYPE_ID
+    ,caretype.ID CARETYPEID
+    ,caretype.NAME CARETYPE_NAME
+    ,caretype.REMARK CARETYPE_REMARK
+    FROM care
+    LEFT JOIN caretype ON caretype.ID= care.CARETYPE_ID
     where 1=1
     <if test="createdatetime">
-      and CARE.CREATEDATETIME > #{createdatetime,jdbcType=TIMESTAMP}
+      and care.CREATEDATETIME > #{createdatetime,jdbcType=TIMESTAMP}
     </if>
     <if test="modifydatetime">
-      and CARE.CREATEDATETIME &lt;  #{modifydatetime,jdbcType=TIMESTAMP}
+      and care.CREATEDATETIME &lt;  #{modifydatetime,jdbcType=TIMESTAMP}
     </if>
     <if test="name !=null and name !=''">
-      and CARE.NAME LIKE #{name,jdbcType=VARCHAR}
+      and care.NAME LIKE #{name,jdbcType=VARCHAR}
     </if>
     <if test="id !=null">
-      and CARE.ID = #{id,jdbcType=VARCHAR}
+      and care.ID = #{id,jdbcType=VARCHAR}
     </if>
     <if test="caretypeId !=null and  caretypeId !=''">
-      and CARE.CARETYPE_ID = #{caretypeId,jdbcType=VARCHAR}
+      and care.CARETYPE_ID = #{caretypeId,jdbcType=VARCHAR}
     </if>
   </select>
 </mapper>
