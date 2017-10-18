@@ -36,13 +36,10 @@
             margin: 0
         }
         /*iCheck样式*/
-
-
     </style>
     <title>电力记录</title>
     <script type="text/javascript">
         //init_flot_chart
-
         var randNum = function() {
             return (Math.floor(Math.random() * (1 + 40 - 20))) + 20;
         };
@@ -51,7 +48,6 @@
         }
 
         function init_flot_chart(){
-
             if( typeof ($.plot) === 'undefined'){ return; }
             console.log('init_flot_chart');
 
