@@ -11,6 +11,7 @@
     <module>long-mes-common</module>
     <module>long-mes-upms</module>
     <module>long-mes-pollute</module>
+      <module>long-mes-bar</module>
   </modules>
   <name>long-mes Maven Webapp</name>
   <url>http://maven.apache.org</url>

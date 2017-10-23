@@ -11,6 +11,10 @@
         <module name="long-mes-activemq-entity" />
         <module name="long-mes-activemq-provider" />
         <module name="long-mes-admin" />
+        <module name="long-mes-bar-dao" />
+        <module name="long-mes-bar-rfc-api" />
+        <module name="long-mes-bar-rfc-service" />
+        <module name="long-mes-bar-web" />
         <module name="long-mes-common" />
         <module name="long-mes-pollute-common" />
         <module name="long-mes-pollute-dao" />
@@ -37,6 +41,11 @@
       <module name="long-mes-activemq-entity" target="1.5" />
       <module name="long-mes-activemq-provider" target="1.5" />
       <module name="long-mes-admin" target="1.5" />
+      <module name="long-mes-bar" target="1.5" />
+      <module name="long-mes-bar-dao" target="1.5" />
+      <module name="long-mes-bar-rfc-api" target="1.5" />
+      <module name="long-mes-bar-rfc-service" target="1.5" />
+      <module name="long-mes-bar-web" target="1.5" />
       <module name="long-mes-common" target="1.8" />
       <module name="long-mes-pollute" target="1.5" />
       <module name="long-mes-pollute-common" target="1.5" />

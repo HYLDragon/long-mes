@@ -9,6 +9,11 @@
       <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-entity/long-mes-activemq-entity.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-entity/long-mes-activemq-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-provider/long-mes-activemq-provider.iml" filepath="$PROJECT_DIR$/long-mes-activemq/long-mes-activemq-provider/long-mes-activemq-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-admin/long-mes-admin.iml" filepath="$PROJECT_DIR$/long-mes-admin/long-mes-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-bar/long-mes-bar.iml" filepath="$PROJECT_DIR$/long-mes-bar/long-mes-bar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-bar/long-mes-bar-dao/long-mes-bar-dao.iml" filepath="$PROJECT_DIR$/long-mes-bar/long-mes-bar-dao/long-mes-bar-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-bar/long-mes-bar-rfc-api/long-mes-bar-rfc-api.iml" filepath="$PROJECT_DIR$/long-mes-bar/long-mes-bar-rfc-api/long-mes-bar-rfc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-bar/long-mes-bar-rfc-service/long-mes-bar-rfc-service.iml" filepath="$PROJECT_DIR$/long-mes-bar/long-mes-bar-rfc-service/long-mes-bar-rfc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/long-mes-bar/long-mes-bar-web/long-mes-bar-web.iml" filepath="$PROJECT_DIR$/long-mes-bar/long-mes-bar-web/long-mes-bar-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-common/long-mes-common.iml" filepath="$PROJECT_DIR$/long-mes-common/long-mes-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-common/long-mes-pollute-common.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-common/long-mes-pollute-common.iml" />

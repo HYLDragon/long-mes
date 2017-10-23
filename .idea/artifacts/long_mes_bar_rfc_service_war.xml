@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="long-mes-bar-rfc-service:war">
+    <output-path>$PROJECT_DIR$/long-mes-bar/long-mes-bar-rfc-service/target</output-path>
+    <root id="archive" name="long-mes-bar-rfc-service.war">
+      <element id="artifact" artifact-name="long-mes-bar-rfc-service:war exploded" />
+    </root>
+  </artifact>
+</component>
