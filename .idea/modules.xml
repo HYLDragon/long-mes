@@ -18,9 +18,6 @@
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-api/long-mes-pollute-rfc-api.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-api/long-mes-pollute-rfc-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-service/long-mes-pollute-rfc-service.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-rfc-service/long-mes-pollute-rfc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-web/long-mes-pollute-web.iml" filepath="$PROJECT_DIR$/long-mes-pollute/long-mes-pollute-web/long-mes-pollute-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/long-mes-rabbitmq/long-mes-rabbitmq.iml" filepath="$PROJECT_DIR$/long-mes-rabbitmq/long-mes-rabbitmq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/long-mes-rabbitmq/long-mes-rabbitmq-consumer/long-mes-rabbitmq-consumer.iml" filepath="$PROJECT_DIR$/long-mes-rabbitmq/long-mes-rabbitmq-consumer/long-mes-rabbitmq-consumer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/long-mes-rabbitmq/long-mes-rabbitmq-provider/long-mes-rabbitmq-provider.iml" filepath="$PROJECT_DIR$/long-mes-rabbitmq/long-mes-rabbitmq-provider/long-mes-rabbitmq-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-client/long-mes-upms-client.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-client/long-mes-upms-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/long-mes-upms/long-mes-upms-common/long-mes-upms-common.iml" filepath="$PROJECT_DIR$/long-mes-upms/long-mes-upms-common/long-mes-upms-common.iml" />

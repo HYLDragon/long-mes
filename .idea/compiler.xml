@@ -19,8 +19,6 @@
         <module name="long-mes-pollute-rfc-api" />
         <module name="long-mes-pollute-rfc-service" />
         <module name="long-mes-pollute-web" />
-        <module name="long-mes-rabbitmq-consumer" />
-        <module name="long-mes-rabbitmq-provider" />
         <module name="long-mes-upms-client" />
         <module name="long-mes-upms-common" />
         <module name="long-mes-upms-dao" />

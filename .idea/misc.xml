@@ -21,6 +21,7 @@
       <set>
         <option value="$PROJECT_DIR$/long-admin/pom.xml" />
         <option value="$PROJECT_DIR$/long-mes-pollute/pom.xml" />
+        <option value="$PROJECT_DIR$/long-mes-rabbitmq/pom.xml" />
       </set>
     </option>
   </component>
