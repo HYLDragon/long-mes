@@ -1,18 +1,6 @@
 var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
 	$SIDEBAR_MENU = $('#sidebar-menu'),
     $BODY = $('#bodyMenu'),
-    //$MENU_TOGGLE = $('#menu_toggle'),
-    //$SIDEBAR_FOOTER = $('.sidebar-footer'),
-    //$LEFT_COL = $('.left_col'),
-    //$RIGHT_COL = $('.right_col'),
-    //$NAV_MENU = $('.nav_menu'),
-    //$FOOTER = $('footer');
-
- 
-    
-    
-    
- // Sidebar
 function init_sidebar() {
 
   $SIDEBAR_MENU.find('a').on('click', function(ev) {
@@ -56,32 +44,6 @@ function init_sidebar() {
 		});
 	}
 };
-// /Sidebar
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//在此作一些初使化
-/*
- 一般用于加载完图片等
- $(window).load(function() {  
-        alert("hello again");  
-});  
- //dom加载完就执行
- $(function(){  
-    // do something  
-});  
- 
- */
-    
-    
 
 $(function(){
 	init_sidebar();

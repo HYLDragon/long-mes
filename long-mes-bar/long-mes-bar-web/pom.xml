@@ -11,7 +11,11 @@
     <name>long-mes-bar-web Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-
+        <dependency>
+            <groupId>com.zx.mes.hyl</groupId>
+            <artifactId>long-mes-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>long-mes-bar-web</finalName>
