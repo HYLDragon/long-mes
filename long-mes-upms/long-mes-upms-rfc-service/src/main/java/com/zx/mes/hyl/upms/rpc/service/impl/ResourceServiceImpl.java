@@ -122,6 +122,35 @@ public class ResourceServiceImpl implements ResourceServiceI {
 		}
 		return lt;
 	}
+    //返回有层级的菜单List
+	public List<Tresource> treeByTsysOrg(SessionInfo sessionInfo) {
+		List<Tresource> l = null;
+		List<Tree> lt = new ArrayList<Tree>();
+		List<Tree> lt2 = new ArrayList<Tree>();
+
+		Map<String, Object> params = new HashMap<String, Object>();
+		if (sessionInfo != null) {
+			params.put("userId", sessionInfo.getId());// 查自己有权限的资源
+			l = resourceDao.find("select distinct t from Tresource t " +
+					"join fetch t.tresourcetype type join fetch t.troles role " +
+					"join role.tusers user " +
+					"where user.id = :userId order by t.seq", params);
+		} else {
+			l = resourceDao.find("select distinct t from Tresource t " +
+					"join fetch t.tresourcetype type order by t.seq", params);
+		}
+
+		if (l != null && l.size() > 0) {
+			for (Tresource r : l) {
+				if (r.getTresources()!=null){
+					r.getTresources();
+				}
+			}
+		}
+		return l;
+	}
+
+
 
 
 	public List<Tree> allTree(SessionInfo sessionInfo) {

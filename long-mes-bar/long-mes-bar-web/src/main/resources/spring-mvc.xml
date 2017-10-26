@@ -16,7 +16,7 @@
 
 	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
 	<context:component-scan base-package="com.zx.mes.hyl.bar.controller,com.zx.mes.hyl.controller" />
-	<!--<import resource="classpath:/dubbo/dubbo-authority-consumer.xml"/>-->
+	<import resource="classpath:/dubbo/dubbo-long-mes-bar-consumer.xml"/>
 
 	<!-- Spring MVC JSON配置 -->
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
@@ -65,6 +65,7 @@
 						<value>/userController/currentUserResourcePage</value><!-- 查看自己的权限页面 -->
 						<value>/testController/homePage</value>
 						<value>/testController/otherPage</value>
+						<value>/testController/menu</value>
 					</list>
 				</property>
 			</bean>

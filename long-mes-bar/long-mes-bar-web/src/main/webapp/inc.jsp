@@ -46,6 +46,7 @@
 <script src="${basePath}/jslib/plugins/iCheck/icheck.min.js"></script>
 
 <script src="${basePath}/commonJS/base.js"></script>
+<script src="${basePath}/commonJS/menu.js"></script>
 
 <!-- ChartJS -->
 <%--<script src="${pageContext.request.contextPath}/jslib/bower_components/Chart.js/Chart.js"></script>--%>

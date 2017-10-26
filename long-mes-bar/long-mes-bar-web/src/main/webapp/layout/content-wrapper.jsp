@@ -42,6 +42,10 @@
             </div>
             <div class="box-body">
                 Start creating your amazing application!
+                <%--<input id="ttt" type="button">--%>
+                <p id="hylbtn">点击</p>
+                <button id="btn">点击</button>
+
             </div>
             <!-- /.box-body -->
             <div class="box-footer">

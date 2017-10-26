@@ -3,6 +3,7 @@ package com.zx.mes.hyl.upms.service;
 
 import com.zx.mes.hyl.pageModel.SessionInfo;
 import com.zx.mes.hyl.pageModel.Tree;
+import com.zx.mes.hyl.upms.model.Tresource;
 import com.zx.mes.hyl.upms.pageModel.Resource;
 
 import java.util.List;
@@ -45,6 +46,16 @@ public interface ResourceServiceI {
 	 * @return
 	 */
 	List<Tree> treeByTsys(SessionInfo sessionInfo);
+
+	/**
+	 * 获得资源树(按模块包括所有资源类型)
+	 *
+	 * 通过用户ID判断，他能看到的资源
+	 *
+	 * @param sessionInfo
+	 * @return 返回有层级的List
+	 */
+	List<Tresource> treeByTsysOrg(SessionInfo sessionInfo);
 
 	/**
 	 * 获得资源列表

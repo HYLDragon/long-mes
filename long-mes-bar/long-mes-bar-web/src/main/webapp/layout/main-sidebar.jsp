@@ -68,9 +68,7 @@
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>Layout Options</span>
-                    <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
+                    <span class="pull-right-container"><span class="label label-primary pull-right">4</span></span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
