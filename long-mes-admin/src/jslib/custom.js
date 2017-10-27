@@ -1,6 +1,6 @@
 var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
 	$SIDEBAR_MENU = $('#sidebar-menu'),
-    $BODY = $('#bodyMenu'),
+    $BODY = $('#bodyMenu');
 function init_sidebar() {
 
   $SIDEBAR_MENU.find('a').on('click', function(ev) {

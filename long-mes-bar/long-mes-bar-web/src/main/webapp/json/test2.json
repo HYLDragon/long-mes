@@ -1,5 +1,4 @@
-[
-  {
+[{
     "attributes":{
 
     },
@@ -94,7 +93,4 @@
     "id":"jeasyuiApi",
     "state":"open",
     "text":"EasyUI API"
-  }
-]
-
-//http://www.json.cn/#
+  }]
