@@ -77,14 +77,19 @@ jQuery.fn.load = function (url, params, callback) {
         }).done(function (responseText) {
             //console.log(responseText);
             response = arguments;
-            //页面超时跳转到首页
-            if (responseText.startWith("<!--login_page_identity-->")) {
-                window.location.href = basePath + "/";
-            } else {
-                self.html(selector ?
-                    jQuery("<div>").append(jQuery.parseHTML(responseText)).find(selector) :
-                    responseText);
-            }
+            // //页面超时跳转到首页
+            // if (responseText.startWith("<!--login_page_identity-->")) {
+            //     window.location.href = basePath + "/";
+            // } else {
+            //     self.html(selector ?
+            //         jQuery("<div>").append(jQuery.parseHTML(responseText)).find(selector) :
+            //         responseText);
+            // }
+
+            self.html(selector ?
+                jQuery("<div>").append(jQuery.parseHTML(responseText)).find(selector) :
+                responseText);
+
         }).always(callback && function (jqXHR, status) {
                 self.each(function () {
                     callback.apply(this, response || [jqXHR.responseText, status, jqXHR]);
