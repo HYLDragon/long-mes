@@ -1,0 +1,24 @@
+2017-10-11 15:02:30 [ ERROR ] [ HeaderExchangeHandler.java :181(received)]  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0xdc9cc616, /10.30.90.68:55431 => /10.30.90.68:20880]], url: dubbo://10.30.90.68:20880/com.zx.mes.hyl.upms.service.BugServiceI?anyhost=true&application=mes-upms-consumer&check=false&codec=dubbo&dubbo=2.5.5&generic=false&heartbeat=60000&interface=com.zx.mes.hyl.upms.service.BugServiceI&methods=add,edit,get,delete,dataGrid&pid=8000&revision=1.0-SNAPSHOT&side=consumer&timestamp=1507704175950, dubbo version: 2.5.5, current host: 10.30.90.68
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0xdc9cc616, /10.30.90.68:55431 => /10.30.90.68:20880]], url: dubbo://10.30.90.68:20880/com.zx.mes.hyl.upms.service.BugServiceI?anyhost=true&application=mes-upms-consumer&check=false&codec=dubbo&dubbo=2.5.5&generic=false&heartbeat=60000&interface=com.zx.mes.hyl.upms.service.BugServiceI&methods=add,edit,get,delete,dataGrid&pid=8000&revision=1.0-SNAPSHOT&side=consumer&timestamp=1507704175950
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2017-10-11 15:02:30 [ ERROR ] [ HeaderExchangeHandler.java :181(received)]  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0xdc9cc616, /10.30.90.68:55431 => /10.30.90.68:20880]], url: dubbo://10.30.90.68:20880/com.zx.mes.hyl.upms.service.BugServiceI?anyhost=true&application=mes-upms-consumer&check=false&codec=dubbo&dubbo=2.5.5&generic=false&heartbeat=60000&interface=com.zx.mes.hyl.upms.service.BugServiceI&methods=add,edit,get,delete,dataGrid&pid=8000&revision=1.0-SNAPSHOT&side=consumer&timestamp=1507704175950, dubbo version: 2.5.5, current host: 10.30.90.68
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0xdc9cc616, /10.30.90.68:55431 => /10.30.90.68:20880]], url: dubbo://10.30.90.68:20880/com.zx.mes.hyl.upms.service.BugServiceI?anyhost=true&application=mes-upms-consumer&check=false&codec=dubbo&dubbo=2.5.5&generic=false&heartbeat=60000&interface=com.zx.mes.hyl.upms.service.BugServiceI&methods=add,edit,get,delete,dataGrid&pid=8000&revision=1.0-SNAPSHOT&side=consumer&timestamp=1507704175950
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2017-10-11 15:02:30 [ ERROR ] [ HeaderExchangeHandler.java :181(received)]  [DUBBO] Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0xdc9cc616, /10.30.90.68:55431 => /10.30.90.68:20880]], url: dubbo://10.30.90.68:20880/com.zx.mes.hyl.upms.service.BugServiceI?anyhost=true&application=mes-upms-consumer&check=false&codec=dubbo&dubbo=2.5.5&generic=false&heartbeat=60000&interface=com.zx.mes.hyl.upms.service.BugServiceI&methods=add,edit,get,delete,dataGrid&pid=8000&revision=1.0-SNAPSHOT&side=consumer&timestamp=1507704175950, dubbo version: 2.5.5, current host: 10.30.90.68
+java.lang.Exception: Dubbo client can not supported string message:  in channel: NettyChannel [channel=[id: 0xdc9cc616, /10.30.90.68:55431 => /10.30.90.68:20880]], url: dubbo://10.30.90.68:20880/com.zx.mes.hyl.upms.service.BugServiceI?anyhost=true&application=mes-upms-consumer&check=false&codec=dubbo&dubbo=2.5.5&generic=false&heartbeat=60000&interface=com.zx.mes.hyl.upms.service.BugServiceI&methods=add,edit,get,delete,dataGrid&pid=8000&revision=1.0-SNAPSHOT&side=consumer&timestamp=1507704175950
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:180)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:81)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

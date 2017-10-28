@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="
+             http://java.sun.com/xml/ns/javaee
+             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <!-- 项目名称 -->
+  <display-name>long-mes-pollute</display-name>
+
+  <!-- 指定spring相关文件的位置 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-mvc.xml,classpath:spring-long-admin.xml</param-value>
+  </context-param>
+
+  <!-- 配置字符集过滤器 -->
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <!-- druid数据源Web监控配置 -->
+  <filter>
+    <filter-name>druidWebStatFilter</filter-name>
+    <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+    <init-param>
+      <param-name>exclusions</param-name>
+      <param-value>/css/*,/style/*,/jslib/*,*.js,*.css,/druid*,/attached/*,*.jsp</param-value>
+    </init-param>
+    <init-param>
+      <param-name>principalSessionName</param-name>
+      <param-value>sessionInfo</param-value>
+    </init-param>
+    <init-param>
+      <param-name>profileEnable</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <!-- 配置项目的编码mapping -->
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- druid数据源Web监控配置mapping -->
+  <filter-mapping>
+    <filter-name>druidWebStatFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 开启spring功能 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- 防止内存溢出监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+
+  <!-- 配置spring mvc -->
+  <servlet>
+    <servlet-name>springMvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-mvc.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <!-- druid监控页面，使用${pageContext.request.contextPath}/druid/index.html访问 -->
+  <servlet>
+    <servlet-name>druidStatView</servlet-name>
+    <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+  </servlet>
+  <!-- 配置spring mvc mapping -->
+  <servlet-mapping>
+    <servlet-name>springMvc</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <!-- 配置静态资源不经过spring mvc -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.css</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>
+  <!-- 图片 -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.png</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.jpg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.ico</url-pattern>
+  </servlet-mapping>
+  <!-- 文档 -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.doc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.xls</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.docx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.xlsx</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.txt</url-pattern>
+  </servlet-mapping>
+
+  <!-- flash -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.swf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.flv</url-pattern>
+  </servlet-mapping>
+  <!-- bootstrap 中的字体样式 -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.woff</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.eot</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.woff2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.svg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.map</url-pattern>
+  </servlet-mapping>
+  <!-- media -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.mp3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.wav</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.wma</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.wmv</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.mid</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.avi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.rmvb</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.mpg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.asf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.rm</url-pattern>
+  </servlet-mapping>
+
+  <!-- 压缩文件 -->
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.zip</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.rar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.gz</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.bz2</url-pattern>
+  </servlet-mapping>
+
+  <!-- druid监控页面mapping -->
+  <servlet-mapping>
+    <servlet-name>druidStatView</servlet-name>
+    <url-pattern>/druid/*</url-pattern>
+  </servlet-mapping>
+
+  <!-- 配置session超时时间，单位分钟 -->
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+
+
+  <!-- ======================== 单点登录开始 ======================== -->
+  <listener>
+    <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+  </listener>
+  <!--用来控制cas识别的session的保存，以及判断是否是登出请求-->
+
+  <filter>
+    <filter-name>CAS Single Sign Out Filter</filter-name>
+    <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
+    <init-param>
+      <param-name>casServerUrlPrefix</param-name>
+      <!--这个地址要和keystore中的CN一致，端口无所谓，域名必须一致，前边我在hosts里面配置了这个域名映射，所以实际上访问的是127.0.0.1-->
+      <param-value>http://10.30.90.68:8080/logout</param-value>
+    </init-param>
+  </filter>
+
+
+
+  <!--用来跳转登录-->
+  <filter>
+    <filter-name>CAS Authentication Filter</filter-name>
+    <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
+    <init-param>
+      <param-name>casServerLoginUrl</param-name>
+      <!--这个地址要和keystore中的CN一致，端口无所谓，域名必须一致，前边我在hosts里面配置了这个域名映射，所以实际上访问的是127.0.0.1-->
+      <param-value>http://10.30.90.68:8080/login</param-value>
+    </init-param>
+    <init-param>
+      <param-name>serverName</param-name>
+      <!--这是你客户端的部署地址，认证时会带着这个地址，认证成功后会跳转到这个地址-->
+      <param-value>http://10.30.90.68:8082</param-value>
+    </init-param>
+  </filter>
+
+  <!--用来验证ticket-->
+  <filter>
+    <filter-name>CAS Validation Filter</filter-name>
+    <filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter</filter-class>
+    <init-param>
+      <param-name>casServerUrlPrefix</param-name>
+      <!--这个地址要和keystore中的CN一致，端口无所谓，域名必须一致，前边我在hosts里面配置了这个域名映射，所以实际上访问的是127.0.0.1-->
+      <param-value>http://10.30.90.68:8080</param-value>
+    </init-param>
+    <init-param>
+      <param-name>serverName</param-name>
+      <!--这是你客户端的部署地址，验证ticket成功后会跳转到这个地址-->
+      <param-value>http://10.30.90.68:8082</param-value>
+    </init-param>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>redirectAfterValidation</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>useSession</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>authn_method</param-name>
+      <param-value>mfa-duo</param-value>
+    </init-param>
+  </filter>
+
+  <!--用来封装request-->
+  <filter>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>CAS Single Sign Out Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>CAS Validation Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>CAS Authentication Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- 该过滤器使得可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。
+     比如AssertionHolder.getAssertion().getPrincipal().getName()。
+     这个类把Assertion信息放在ThreadLocal变量中，这样应用程序不在web层也能够获取到当前登录信息 -->
+  <filter>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CAS Assertion Thread Local Filter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- ======================== 单点登录结束 ======================== -->
+
+
+  <!-- 设置欢迎页面 -->
+  <welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+    <welcome-file>/init.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- 找不到页错误转向 -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error/404.jsp</location>
+  </error-page>
+  <!-- 系统内部错误转向 -->
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error/500.jsp</location>
+  </error-page>
+
+</web-app>
