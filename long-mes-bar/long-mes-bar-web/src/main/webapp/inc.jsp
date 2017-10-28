@@ -43,6 +43,10 @@
 <script src="${basePath}/jslib/dist/js/demo.js"></script>
 <!-- iCheck -->
 <script src="${basePath}/jslib/plugins/iCheck/icheck.min.js"></script>
+<!-- DataTables -->
+<script src="${basePath}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="${basePath}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 
 <script src="${basePath}/commonJS/base.js"></script>
 <script src="${basePath}/commonJS/menu.js"></script>
