@@ -3,7 +3,7 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<!-- 启动解压longAdmin-x.x.x.jar到resources目录 -->
-	<bean id="zhengAdminUtil" class="com.zx.mes.hyl.util.LongAdminUtil"></bean>
+	<!--&lt;!&ndash; 启动解压longAdmin-x.x.x.jar到resources目录 &ndash;&gt;-->
+	<!--<bean id="zhengAdminUtil" class="com.zx.mes.hyl.util.LongAdminUtil"></bean>-->
 
 </beans>
