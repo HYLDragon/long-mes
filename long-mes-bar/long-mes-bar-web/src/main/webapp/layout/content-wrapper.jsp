@@ -56,4 +56,12 @@
         <!-- /.box -->
     </section>
     <!-- /.content -->
+<script type="text/javascript">
+    $(function () {
+        $("#btn").on('click',function () {
+
+            menu("http://localhost:8080/json/test2.json");
+        });
+    });
+</script>
 
