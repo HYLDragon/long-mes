@@ -1,51 +1,43 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="basePath" value="${pageContext.request.contextPath}"/>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Custom Theme Style -->
-<!-- 
-    <link href="../build/css/custom.min.css" rel="stylesheet">
- -->
+
+<%--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">--%>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"; charset=UTF-8">
+
+
+<!-- Bootstrap 3.3.7 -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/bootstrap/dist/css/bootstrap.min.css">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/font-awesome-4.7.0/css/font-awesome.min.css"
-      type="text/css"></link>
-<!-- NProgress --> 
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/nprogress-0.2.0/nprogress.css" type="text/css"></link>--%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/font-awesome/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/Ionicons/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/dist/css/AdminLTE.min.css">
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/dist/css/skins/_all-skins.min.css">
+<!-- Morris chart -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/morris.js/morris.css">
+<!-- jvectormap -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/jvectormap/jquery-jvectormap.css">
+<!-- Date Picker -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+<!-- Daterange picker -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<%--字体样式设置--%>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/style/googleapisFamily.css">
 <!-- iCheck -->
-<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/icheck-1.0.2/skins/flat/green.css" type="text/css"></link>
-<!-- bootstrap-progressbar -->
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/bootstrap-progressbar-0.9.0/css/bootstrap-progressbar-3.3.4.css" type="text/css"></link>--%>
-<!-- JQVMap -->
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/jqvmap-1.5.1/dist/jqvmap.css" type="text/css"></link>--%>
-<!-- bootstrap-daterangepicker -->
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/bootstrap-daterangepicker-2.1.25/daterangepicker.css" type="text/css"></link>--%>
-<!-- pnotify-3.2.0 -->
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/pnotify-3.2.0/dist/pnotify.css" type="text/css"></link>--%>
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/pnotify-3.2.0/dist/pnotify.buttons.css" type="text/css"></link>--%>
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/pnotify-3.2.0/dist/pnotify.nonblock.css" type="text/css"></link>--%>
-
-<!-- Datatables -->
-<%--<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/DataTables-1.10.15/media/css/dataTables.bootstrap.css" type="text/css"></link>--%>
-<%--<link rel="stylesheet" href="${basePath}/resources/mes-admin/jslib/DataTables-1.10.15/extensions/Scroller/css/scroller.bootstrap.css" type="text/css"></link>--%>
-<%--<link rel="stylesheet" href="${basePath}/resources/mes-admin/jslib/DataTables-1.10.15/extensions/Responsive/css/responsive.bootstrap.css" type="text/css"></link>--%>
-<%--<link rel="stylesheet" href="${basePath}/resources/mes-admin/jslib/DataTables-1.10.15/extensions/FixedHeader/css/fixedHeader.bootstrap.css" type="text/css"></link>--%>
-<%--<link rel="stylesheet" href="${basePath}/resources/mes-admin/jslib/DataTables-1.10.15/extensions/Buttons/css/buttons.bootstrap.css" type="text/css"></link>--%>
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/plugins/iCheck/square/blue.css">
+<!-- jQuery 3 -->
+<script src="${basePath}/jslib/bower_components/jquery/dist/jquery.min.js"></script>

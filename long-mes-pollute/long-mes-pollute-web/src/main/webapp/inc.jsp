@@ -1,72 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <c:set var="basePath" value="${pageContext.request.contextPath}"/>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/extBrowser.js" charset="utf-8"></script>
+<%--<!-- jQuery 3 将其放在incss.jsp中-->--%>
+<%--<script src="${basePath}/jslib/bower_components/jquery/dist/jquery.min.js"></script>--%>
+<!-- jQuery UI 1.11.4 -->
+<script src="${basePath}/jslib/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="${basePath}/jslib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="${basePath}/jslib/bower_components/raphael/raphael.min.js"></script>
+<script src="${basePath}/jslib/bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="${basePath}/jslib/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="${basePath}/jslib/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="${basePath}/jslib/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="${basePath}/jslib/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="${basePath}/jslib/bower_components/moment/min/moment.min.js"></script>
+<script src="${basePath}/jslib/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="${basePath}/jslib/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="${basePath}/jslib/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="${basePath}/jslib/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${basePath}/jslib/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${basePath}/jslib/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="${basePath}/jslib/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="${basePath}/jslib/dist/js/demo.js"></script>
+<!-- iCheck -->
+<script src="${basePath}/jslib/plugins/iCheck/icheck.min.js"></script>
+<!-- DataTables -->
+<script src="${basePath}/jslib/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="${basePath}/jslib/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
-<!-- 引入my97日期时间控件 -->
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/My97DatePicker4.8b3/My97DatePicker/WdatePicker.js" charset="utf-8"></script>
 
-<!-- 引入kindEditor插件 -->
-<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/kindeditor-4.1.7/themes/default/default.css">
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/kindeditor-4.1.7/kindeditor-all-min.js" charset="utf-8"></script>
+<script src="${basePath}/commonJS/base.js"></script>
+<script src="${basePath}/commonJS/menu.js"></script>
+<script src="${basePath}/commonJS/image.js"></script>
 
-<!-- 引入jQuery -->
-<!-- <script src="${pageContext.request.contextPath}/jslib/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>  -->
-<script src="${basePath}/resources/long-mes-admin/jslib/jquery-2.2.4.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- 引入Highcharts -->
-<script src="${basePath}/resources/long-mes-admin/jslib/Highcharts-3.0.1/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
-
-
-<!-- 引入bootstrap样式 -->
-<link href="${basePath}/resources/long-mes-admin/jslib/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
-
-<!-- 引入FileUpload -->
-<!-- canvas-to-blob.min.js is only needed if you wish to resize images before upload.
-     This must be loaded before fileinput.min.js -->
-<script src="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
-<!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
-     This must be loaded before fileinput.min.js -->
-<script src="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/js/plugins/sortable.min.js" type="text/javascript"></script>
-<!-- purify.min.js is only needed if you wish to purify HTML content in your preview for HTML files.
-     This must be loaded before fileinput.min.js -->
-<script src="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/js/plugins/purify.min.js" type="text/javascript"></script>
-<!-- the main fileinput plugin file -->
-<script src="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/js/fileinput.min.js"></script>
-
-
-
-<script charset="utf-8" src="${basePath}/resources/long-mes-admin/jslib/bootstrap-3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
-
-
-<!-- 引入FileUpload -->
-<script src="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/themes/gly/theme.js"></script>
-<!-- optionally if you need translation for your language then include 
-    locale file as mentioned below -->
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/bootstrap-fileinput/js/locales/zh.js"></script>
-
-<!-- 引入EasyUI -->
-<link id="easyuiTheme" rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/jquery-easyui-1.5.1/themes/<c:out value="${cookie.easyuiThemeName.value}" default="bootstrap"/>/easyui.css" type="text/css">
-<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/jslib/jquery-easyui-1.3.3/themes/icon.css" type="text/css"> -->
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/jquery-easyui-1.5.1/jquery.easyui.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/jquery-easyui-1.5.1/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>
-
-<!-- 引入EasyUI Portal插件 -->
-<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/jquery-easyui-portal/portal.css" type="text/css">
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/jquery-easyui-portal/jquery.portal.js" charset="utf-8"></script>
-
-<!-- 扩展EasyUI -->
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/extEasyUI.js?v=201305241044" charset="utf-8"></script>
-
-<!-- 扩展EasyUI Icon -->
-<link rel="stylesheet" href="${basePath}/resources/long-mes-admin/jslib/style/extEasyUIIcon.css?v=201305301906"
-      type="text/css">
-
-<!-- 扩展jQuery -->
-<script type="text/javascript" src="${basePath}/resources/long-mes-admin/jslib/extJquery.js?v=201305301341" charset="utf-8"></script>
+<!-- ChartJS -->
+<%--<script src="${pageContext.request.contextPath}/jslib/bower_components/Chart.js/Chart.js"></script>--%>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<%--<script src="${pageContext.request.contextPath}/jslib/dist/js/pages/dashboard2.js"></script>--%>
