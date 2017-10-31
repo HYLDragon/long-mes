@@ -60,8 +60,7 @@
 
         $.when( $.post('${pageContext.request.contextPath}/loginController/login', function(result) {
             if (result.success) {
-                menu(basePath+"/resourceController/tree")
-                <%--loadPage("${pageContext.request.contextPath}/resourceController/tree");--%>
+                menu(basePath+"/resourceController/tree");
             } else {
 
             }
@@ -70,17 +69,19 @@
         });
 
     }
-//  为菜单添加click事件
-function addClick() {
+    //  为菜单添加click事件
+    function addClick() {
 
-    console.log("li> li "+$(".sidebar-menu").find("li:not(.header,.treeview)"));
-    $(".sidebar-menu").find("li:not(.header,.treeview)").on('click',function () {
-        console.log("this :"+this);
-        var url=$(this).find("a").attr("data-url");
 
-        loadPage(basePath+url);
-    });
-}
+        $(".sidebar-menu").find("li:not(.header,.treeview)").each(function () {
+            console.log($(this).find("a"));
+            $(this).find("a").on('click',function (event) {
+                console.log("thisxxxxx :"+this);
+                var url=$(this).attr("data-url");
+                loadPage(basePath+url);
+            })
+        });
+    }
 </script>
 
 <script type="text/javascript">

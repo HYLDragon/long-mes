@@ -53,7 +53,7 @@ function showall(menu_list, parent) {
         }
         //如果该节点没有子节点，则直接将该节点li以及文本创建好直接添加到父亲节点中
         else {
-            $('<li><a href="#" data-url="'+menu_list[menu].url+'"><i class="fa fa-share"></i><span>'+menu_list[menu].text+'</span></a></li>').appendTo(parent);
+            $('<li><a  data-url="'+menu_list[menu].url+'"><i class="fa fa-share"></i><span>'+menu_list[menu].text+'</span></a></li>').appendTo(parent);
             // $('<li><a href="#" data-url="'+menu_list[menu].url+'"><i class="'+menu_list[menu].iconCls+'"></i><span>'+menu_list[menu].text+'</span></a></li>').appendTo(parent);
 
         }
@@ -63,7 +63,7 @@ function showall(menu_list, parent) {
 var menu=function (url) {
     jQuery.ajax({
         type: 'get',
-        async: true,
+        async: false,
         url: url,
         dataType: 'json',
         //contentType : 'application/json',
