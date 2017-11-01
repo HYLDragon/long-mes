@@ -12,8 +12,7 @@
 <script>
     $.widget.bridge('uibutton', $.ui.button);
 </script>
-<!-- Bootstrap 3.3.7 -->
-<script src="${basePath}/jslib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
 <!-- Morris.js charts -->
 <script src="${basePath}/jslib/bower_components/raphael/raphael.min.js"></script>
 <script src="${basePath}/jslib/bower_components/morris.js/morris.min.js"></script>
@@ -35,24 +34,13 @@
 <script src="${basePath}/jslib/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="${basePath}/jslib/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="${basePath}/jslib/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="${basePath}/jslib/dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="${basePath}/jslib/dist/js/demo.js"></script>
+
 <!-- iCheck -->
 <script src="${basePath}/jslib/plugins/iCheck/icheck.min.js"></script>
 <!-- DataTables -->
 <script src="${basePath}/jslib/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="${basePath}/jslib/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
-
-<script src="${basePath}/commonJS/base.js"></script>
-<script src="${basePath}/commonJS/menu.js"></script>
-<script src="${basePath}/commonJS/image.js"></script>
-
-<!-- ChartJS -->
-<%--<script src="${pageContext.request.contextPath}/jslib/bower_components/Chart.js/Chart.js"></script>--%>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<%--<script src="${pageContext.request.contextPath}/jslib/dist/js/pages/dashboard2.js"></script>--%>
+<script src="${basePath}/jslib/dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes(首页初使化时需要) -->
+<script src="${basePath}/jslib/dist/js/demo.js"></script>
