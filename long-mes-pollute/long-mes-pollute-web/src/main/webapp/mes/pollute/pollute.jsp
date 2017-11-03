@@ -8,6 +8,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <jsp:include page="../../inccss.jsp"></jsp:include>
+
+
 <%--内容头(页面头部)--%>
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -23,282 +25,70 @@
 
 <!-- Main content -->
 <section class="content">
-    <!-- Small boxes (Stat box) -->
-    <div class="row">
-        <div class="col-lg-3 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-aqua">
-                <div class="inner">
-                    <h3>150</h3>
-
-                    <p>New Orders</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-green">
-                <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                    <p>Bounce Rate</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-yellow">
-                <div class="inner">
-                    <h3>44</h3>
-
-                    <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-red">
-                <div class="inner">
-                    <h3>65</h3>
-
-                    <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-        </div>
-        <!-- ./col -->
-    </div>
-    <!-- /.row -->
     <!-- Main row -->
     <div class="row">
         <!-- Left col -->
-        <section class="col-lg-7 connectedSortable">
-            <!-- Custom tabs (Charts with tabs)-->
-            <div class="nav-tabs-custom">
-                <!-- Tabs within a box -->
-                <ul class="nav nav-tabs pull-right">
-                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                    <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                    <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                </ul>
-                <div class="tab-content no-padding">
-                    <!-- Morris chart - Sales -->
-                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
-                </div>
-            </div>
-            <!-- /.nav-tabs-custom -->
+        <section class="col-lg-12 connectedSortable">
 
-            <!-- Chat box -->
-            <div class="box box-success">
-                <div class="box-header">
-                    <i class="fa fa-comments-o"></i>
-
-                    <h3 class="box-title">Chat</h3>
-
-                    <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                        <div class="btn-group" data-toggle="btn-toggle">
-                            <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
-                            </button>
-                            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-body chat" id="chat-box">
-                    <!-- chat item -->
-                    <div class="item">
-                        <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
-
-                        <p class="message">
-                            <a href="#" class="name">
-                                <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                                Mike Doe
-                            </a>
-                            I would like to meet you to discuss the latest news about
-                            the arrival of the new theme. They say it is going to be one the
-                            best themes on the market
-                        </p>
-                        <div class="attachment">
-                            <h4>Attachments:</h4>
-
-                            <p class="filename">
-                                Theme-thumbnail-image.jpg
-                            </p>
-
-                            <div class="pull-right">
-                                <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
-                            </div>
-                        </div>
-                        <!-- /.attachment -->
-                    </div>
-                    <!-- /.item -->
-                    <!-- chat item -->
-                    <div class="item">
-                        <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
-
-                        <p class="message">
-                            <a href="#" class="name">
-                                <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
-                                Alexander Pierce
-                            </a>
-                            I would like to meet you to discuss the latest news about
-                            the arrival of the new theme. They say it is going to be one the
-                            best themes on the market
-                        </p>
-                    </div>
-                    <!-- /.item -->
-                    <!-- chat item -->
-                    <div class="item">
-                        <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
-
-                        <p class="message">
-                            <a href="#" class="name">
-                                <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
-                                Susan Doe
-                            </a>
-                            I would like to meet you to discuss the latest news about
-                            the arrival of the new theme. They say it is going to be one the
-                            best themes on the market
-                        </p>
-                    </div>
-                    <!-- /.item -->
-                </div>
-                <!-- /.chat -->
-                <div class="box-footer">
-                    <div class="input-group">
-                        <input class="form-control" placeholder="Type message...">
-
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.box (chat box) -->
-
-            <!-- TO DO List -->
+            <!-- Table test -->
             <div class="box box-primary">
                 <div class="box-header">
                     <i class="ion ion-clipboard"></i>
 
-                    <h3 class="box-title">To Do List</h3>
+                    <h3 class="box-title">Table test</h3>
 
                     <div class="box-tools pull-right">
-                        <ul class="pagination pagination-sm inline">
-                            <li><a href="#">&laquo;</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">&raquo;</a></li>
-                        </ul>
+                        右边的buttons
                     </div>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
-                    <ul class="todo-list">
-                        <li>
-                            <!-- drag handle -->
-                            <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                            <!-- checkbox -->
-                            <input type="checkbox" value="">
-                            <!-- todo text -->
-                            <span class="text">Design a nice theme</span>
-                            <!-- Emphasis label -->
-                            <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                            <!-- General tools such as edit or delete-->
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                            <input type="checkbox" value="">
-                            <span class="text">Make the theme responsive</span>
-                            <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                            <input type="checkbox" value="">
-                            <span class="text">Let theme shine like a star</span>
-                            <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                            <input type="checkbox" value="">
-                            <span class="text">Let theme shine like a star</span>
-                            <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                            <input type="checkbox" value="">
-                            <span class="text">Check your messages and notifications</span>
-                            <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                        <li>
-                      <span class="handle">
-                        <i class="fa fa-ellipsis-v"></i>
-                        <i class="fa fa-ellipsis-v"></i>
-                      </span>
-                            <input type="checkbox" value="">
-                            <span class="text">Let theme shine like a star</span>
-                            <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
-                            <div class="tools">
-                                <i class="fa fa-edit"></i>
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="domab">
+                        <div style="float:right;">
+                            <label>
+                                模糊查询：
+                                <input type="text" class="dsearch" placeholder="" aria-controls="example"></label>
+                        </div>
+
+                        <button id="button" style="float:left;">删除选中的行</button>
+                        <div style="float:left; position:relative; z-index:9999;height:100%;">
+                            <button class="showcol">列段显示/隐藏</button>
+                            <ul class="showul"
+                                style=" list-style:none;display:none; position:absolute; left:80px; top:10px; background:#FFFFFF; border:1px solid #ccc; width:200px;">
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="2"/>
+                                    服务器名称
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="3"/>
+                                    IP
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="4"/>
+                                    CPU/内存
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="5"/>
+                                    数据盘大小
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="6"/>
+                                    操作系统
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="7"/>
+                                    状态
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div>
+                        <table id="example" class="table table-striped table-hover" >
+
+                        </table>
+                    </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer clearfix no-border">
@@ -307,218 +97,9 @@
             </div>
             <!-- /.box -->
 
-            <!-- quick email widget -->
-            <div class="box box-info">
-                <div class="box-header">
-                    <i class="fa fa-envelope"></i>
-
-                    <h3 class="box-title">Quick Email</h3>
-                    <!-- tools box -->
-                    <div class="pull-right box-tools">
-                        <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
-                                title="Remove">
-                            <i class="fa fa-times"></i></button>
-                    </div>
-                    <!-- /. tools -->
-                </div>
-                <div class="box-body">
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="emailto" placeholder="Email to:">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject">
-                        </div>
-                        <div>
-                  <textarea class="textarea" placeholder="Message"
-                            style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="box-footer clearfix">
-                    <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
-                        <i class="fa fa-arrow-circle-right"></i></button>
-                </div>
-            </div>
-
         </section>
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
-        <section class="col-lg-5 connectedSortable">
-
-            <!-- Map box -->
-            <div class="box box-solid bg-light-blue-gradient">
-                <div class="box-header">
-                    <!-- tools box -->
-                    <div class="pull-right box-tools">
-                        <button type="button" class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip"
-                                title="Date range">
-                            <i class="fa fa-calendar"></i></button>
-                        <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse"
-                                data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
-                            <i class="fa fa-minus"></i></button>
-                    </div>
-                    <!-- /. tools -->
-
-                    <i class="fa fa-map-marker"></i>
-
-                    <h3 class="box-title">
-                        Visitors
-                    </h3>
-                </div>
-                <div class="box-body">
-                    <div id="world-map" style="height: 250px; width: 100%;"></div>
-                </div>
-                <!-- /.box-body-->
-                <div class="box-footer no-border">
-                    <div class="row">
-                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                            <div id="sparkline-1"></div>
-                            <div class="knob-label">Visitors</div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                            <div id="sparkline-2"></div>
-                            <div class="knob-label">Online</div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-xs-4 text-center">
-                            <div id="sparkline-3"></div>
-                            <div class="knob-label">Exists</div>
-                        </div>
-                        <!-- ./col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-            </div>
-            <!-- /.box -->
-
-            <!-- solid sales graph -->
-            <div class="box box-solid bg-teal-gradient">
-                <div class="box-header">
-                    <i class="fa fa-th"></i>
-
-                    <h3 class="box-title">Sales Graph</h3>
-
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="box-body border-radius-none">
-                    <div class="chart" id="line-chart" style="height: 250px;"></div>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer no-border">
-                    <div class="row">
-                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                            <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
-                                   data-fgColor="#39CCCC">
-
-                            <div class="knob-label">Mail-Orders</div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
-                            <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
-                                   data-fgColor="#39CCCC">
-
-                            <div class="knob-label">Online</div>
-                        </div>
-                        <!-- ./col -->
-                        <div class="col-xs-4 text-center">
-                            <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
-                                   data-fgColor="#39CCCC">
-
-                            <div class="knob-label">In-Store</div>
-                        </div>
-                        <!-- ./col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.box-footer -->
-            </div>
-            <!-- /.box -->
-
-            <!-- Calendar -->
-            <div class="box box-solid bg-green-gradient">
-                <div class="box-header">
-                    <i class="fa fa-calendar"></i>
-
-                    <h3 class="box-title">Calendar</h3>
-                    <!-- tools box -->
-                    <div class="pull-right box-tools">
-                        <!-- button with a dropdown -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-bars"></i></button>
-                            <ul class="dropdown-menu pull-right" role="menu">
-                                <li><a href="#">Add new event</a></li>
-                                <li><a href="#">Clear events</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">View calendar</a></li>
-                            </ul>
-                        </div>
-                        <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
-                        </button>
-                    </div>
-                    <!-- /. tools -->
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body no-padding">
-                    <!--The calendar -->
-                    <div id="calendar" style="width: 100%"></div>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer text-black">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- Progress bars -->
-                            <div class="clearfix">
-                                <span class="pull-left">Task #1</span>
-                                <small class="pull-right">90%</small>
-                            </div>
-                            <div class="progress xs">
-                                <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                            </div>
-
-                            <div class="clearfix">
-                                <span class="pull-left">Task #2</span>
-                                <small class="pull-right">70%</small>
-                            </div>
-                            <div class="progress xs">
-                                <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-6">
-                            <div class="clearfix">
-                                <span class="pull-left">Task #3</span>
-                                <small class="pull-right">60%</small>
-                            </div>
-                            <div class="progress xs">
-                                <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                            </div>
-
-                            <div class="clearfix">
-                                <span class="pull-left">Task #4</span>
-                                <small class="pull-right">40%</small>
-                            </div>
-                            <div class="progress xs">
-                                <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-            </div>
-            <!-- /.box -->
-
-        </section>
         <!-- right col -->
     </div>
     <!-- /.row (main row) -->
@@ -528,170 +109,230 @@
 
 <jsp:include page="../../inc.jsp"></jsp:include>
 <script type="text/javascript">
+
+    //删除方法
+
+    //  function del(id, name) {
+    //      console.log("id,name"+id+" : "+name);
+    //      $.ajax({
+    //          url: "del.action",
+    //          //在后台接受id这个参数
+    //
+    //          data: {
+    //              id: id
+    //          },
+    //          success: function(data) {
+    //              if (data.flag) {
+    //                  //如果后台删除成功，则刷新表格，并提示用户删除成功
+    //                  //保留分页信息
+    //                  table.ajax.reload(null, false);
+    //                  alert(name + data.msg);
+    //              }
+    //          }
+    //      });
+    //  }
+
+
+
+    var del=function (id) {
+        console.log("xxxx"+id);
+    };
+
+    var add=function (id) {
+        console.log("xxxx"+id);
+    };
+
+
+    /**
+     * @author
+     *
+     * 增加formatString功能
+     *
+     * 使用方法：fs('字符串{0}字符串{1}字符串','第一个变量','第二个变量');
+     *
+     * @returns 格式化后的字符串
+     */
+    var fs = function(str) {
+        for ( var i = 0; i < arguments.length - 1; i++) {
+            str = str.replace("{" + i + "}", arguments[i + 1]);
+        }
+        return str;
+    };
+
+
     $(function () {
 
-        /* BoxWidget()
-         * ======
-         * Adds box widget functions to boxes.
-         *
-         * @Usage: $('.my-box').boxWidget(options)
-         *         This plugin auto activates on any element using the `.box` class
-         *         Pass any option as data-option="value"
-         */
-        +function ($) {
-            'use strict'
-
-            var DataKey = 'lte.boxwidget'
-
-            var Default = {
-                animationSpeed : 500,
-                collapseTrigger: '[data-widget="collapse"]',
-                removeTrigger  : '[data-widget="remove"]',
-                collapseIcon   : 'fa-minus',
-                expandIcon     : 'fa-plus',
-                removeIcon     : 'fa-times'
-            }
-
-            var Selector = {
-                data     : '.box',
-                collapsed: '.collapsed-box',
-                body     : '.box-body',
-                footer   : '.box-footer',
-                tools    : '.box-tools'
-            }
-
-            var ClassName = {
-                collapsed: 'collapsed-box'
-            }
-
-            var Event = {
-                collapsed: 'collapsed.boxwidget',
-                expanded : 'expanded.boxwidget',
-                removed  : 'removed.boxwidget'
-            }
-
-            // BoxWidget Class Definition
-            // =====================
-            var BoxWidget = function (element, options) {
-                this.element = element
-                this.options = options
-
-                this._setUpListeners()
-            }
-
-            BoxWidget.prototype.toggle = function () {
-                var isOpen = !$(this.element).is(Selector.collapsed)
-
-                if (isOpen) {
-                    this.collapse()
-                } else {
-                    this.expand()
+        var table = $('#example').DataTable({
+            "dom": '<"top"f>rt<"bottom"lip><"clear">',//dom定位
+            "dom": 'tiprl',//自定义显示项
+            //"dom":'<"domab"f>',
+//            "scrollY": "220px",//dt高度
+            "ajax": "${pageContext.request.contextPath}/careController/dataTable",
+            "serverSide": true,
+            "columns":[
+                {
+                    "data": null,"width":"30",//此列不绑定数据源，用来显示序号
+                    "title":"序号"
+                },
+                {
+                    "data": null,width:"30" ,//此列不绑定数据源，用来显示选中框
+                    "title":"<input type='checkbox' id='checkall' />"
+                },
+                {
+                    "data": "id",
+                    "title":"编号"
+                },
+                {
+                    "data": "name",
+                    "title":"名称"
+                },
+                {
+                    "data": "createdatetime",
+                    "title":"创建时间"
+                },
+                {
+                    "data": "modifydatetime",
+                    "title":"最后修改时间"
+                },
+                {
+                    "data": "careTypeId",
+                    "title":"保养类型ID"
+                },
+                {
+                    "data": "careTypeName",
+                    "title":"保养类型名称"
+                },
+                {
+                    "data": "remark",
+                    "title":"保养详细说明"
+                },
+                {
+                    "data": null,
+                    "title":"操作"
+                }],
+            "lengthMenu": [
+                [8, 6, 8, -1],
+                [4, 6, 8, "All"]
+            ],//每页显示条数设置
+            "lengthChange": false,//是否允许用户自定义显示数量
+            "bPaginate": true, //翻页功能
+            "bFilter": false, //列筛序功能
+            "searching": true,//本地搜索
+            "ordering": true, //排序功能
+            "Info": true,//页脚信息
+            "autoWidth": false,//自动宽度
+            "oLanguage": {//国际语言转化
+                "oAria": {
+                    "sSortAscending": " - click/return to sort ascending",
+                    "sSortDescending": " - click/return to sort descending"
+                },
+                "sLengthMenu": "显示 _MENU_ 记录",
+                "sZeroRecords": "对不起，查询不到任何相关数据",
+                "sEmptyTable": "未有相关数据",
+                "sLoadingRecords": "正在加载数据-请等待...",
+                "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录。",
+                "sInfoEmpty": "当前显示0到0条，共0条记录",
+                "sInfoFiltered": "（数据库中共为 _MAX_ 条记录）",
+                "sProcessing": "<img src='../resources/user_share/row_details/select2-spinner.gif'/> 正在加载数据...",
+                "sSearch": "模糊查询：",
+                "sUrl": "",
+                //多语言配置文件，可将oLanguage的设置放在一个txt文件中，例：Javascript/datatable/dtCH.txt
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": " 上一页 ",
+                    "sNext": " 下一页 ",
+                    "sLast": " 尾页 "
                 }
-            }
-
-            BoxWidget.prototype.expand = function () {
-                var expandedEvent = $.Event(Event.expanded)
-                var collapseIcon  = this.options.collapseIcon
-                var expandIcon    = this.options.expandIcon
-
-                $(this.element).removeClass(ClassName.collapsed)
-
-                $(this.element)
-                    .find(Selector.tools)
-                    .find('.' + expandIcon)
-                    .removeClass(expandIcon)
-                    .addClass(collapseIcon)
-
-                $(this.element).find(Selector.body + ', ' + Selector.footer)
-                    .slideDown(this.options.animationSpeed, function () {
-                        $(this.element).trigger(expandedEvent)
-                    }.bind(this))
-            }
-
-            BoxWidget.prototype.collapse = function () {
-                var collapsedEvent = $.Event(Event.collapsed)
-                var collapseIcon   = this.options.collapseIcon
-                var expandIcon     = this.options.expandIcon
-
-                $(this.element)
-                    .find(Selector.tools)
-                    .find('.' + collapseIcon)
-                    .removeClass(collapseIcon)
-                    .addClass(expandIcon)
-
-                $(this.element).find(Selector.body + ', ' + Selector.footer)
-                    .slideUp(this.options.animationSpeed, function () {
-                        $(this.element).addClass(ClassName.collapsed)
-                        $(this.element).trigger(collapsedEvent)
-                    }.bind(this))
-            }
-
-            BoxWidget.prototype.remove = function () {
-                var removedEvent = $.Event(Event.removed)
-
-                $(this.element).slideUp(this.options.animationSpeed, function () {
-                    $(this.element).trigger(removedEvent)
-                    $(this.element).remove()
-                }.bind(this))
-            }
-
-            // Private
-
-            BoxWidget.prototype._setUpListeners = function () {
-                var that = this
-
-                $(this.element).on('click', this.options.collapseTrigger, function (event) {
-                    if (event) event.preventDefault()
-                    that.toggle()
-                })
-
-                $(this.element).on('click', this.options.removeTrigger, function (event) {
-                    if (event) event.preventDefault()
-                    that.remove()
-                })
-            }
-
-            // Plugin Definition
-            // =================
-            function Plugin(option) {
-                return this.each(function () {
-                    var $this = $(this)
-                    var data  = $this.data(DataKey)
-
-                    if (!data) {
-                        var options = $.extend({}, Default, $this.data(), typeof option == 'object' && option)
-                        $this.data(DataKey, (data = new BoxWidget($this, options)))
+            },
+            "columnDefs": [
+                {
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": 0
+                },
+                {
+                    //   指定第一列，从0开始，0表示第一列，1表示第二列……
+                    "searchable": false,
+                    "orderable": false,
+                    targets: 1,
+                    render: function(data, type, row) {
+                        return  '<input type="checkbox" name="checkList">';
                     }
+                },//第一列与第二列禁止排序
+                {
+                    //   指定第最后一列
 
-                    if (typeof option == 'string') {
-                        if (typeof data[option] == 'undefined') {
-                            throw new Error('No method named ' + option)
-                        }
-                        data[option]()
+                    targets: 8,
+                    "searchable": false,
+                    "orderable": false,
+                    render: function(data, type, row) {
+                        var str = '';
+                        str += fs('<a type="button" onclick="del(\'{0}\');">删除</a>',row.name);
+                        str += '&nbsp;';
+                        str += fs('<a type="button" onclick="add(\'{0}\');">添加</a>',row.name);
+                        return str;
                     }
-                })
+                }
+            ],
+            "order": [
+                [0, null]
+            ],//第一列排序图标改为默认
+        });
+
+        table.on('order.dt search.dt',
+            function() {
+                table.column(0, {
+                    search: 'applied',
+                    order: 'applied'
+                }).nodes().each(function(cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+        //自定义搜索
+        $('.dsearch').on('keyup click', function () {
+            var tsval = $(".dsearch").val()
+            table.search(tsval, false, false).draw();
+        });
+
+        //checkbox全选
+        $("#checkAll").on("click", function () {
+            if ($(this).prop("checked") === true) {
+                $("input[name='checkList']").prop("checked", $(this).prop("checked"));
+                $('#example tbody tr').addClass('selected');
+            } else {
+                $("input[name='checkList']").prop("checked", false);
+                $('#example tbody tr').removeClass('selected');
             }
+        });
 
-            var old = $.fn.boxWidget
+        //显示隐藏列
+        $('.toggle-vis').on('change', function (e) {
+            e.preventDefault();
+            console.log($(this).attr('data-column'));
+            var column = table.column($(this).attr('data-column'));
+            column.visible(!column.visible());
+        });
 
-            $.fn.boxWidget             = Plugin
-            $.fn.boxWidget.Constructor = BoxWidget
+        //删除选中行
+        $('#example tbody').on('click', 'tr input[name="checkList"]', function () {
+            var $tr = $(this).parents('tr');
+            $tr.toggleClass('selected');
+            var $tmp = $('[name=checkList]:checkbox');
+            $('#checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
 
-            // No Conflict Mode
-            // ================
-            $.fn.boxWidget.noConflict = function () {
-                $.fn.boxWidget = old
-                return this
-            }
+        });
 
-            // BoxWidget Data API
-            // ==================
-            $(window).on('load', function () {
-                $(Selector.data).each(function () {
-                    Plugin.call($(this))
-                })
-            })
+        $('#button').click(function () {
+//            console.log(table.row('.selected').node());
+//            console.log(table.row('.selected').data());//获得整行的数据
+//            console.log(table.row('.selected').data().name);//获得整行的数据中的一列值
+            table.row('.selected').remove().draw(false);
+        });
 
-        }(jQuery)
+        $('.showcol').click(function () {
+            $('.showul').toggle();
+
+        });
     });
+
 </script>

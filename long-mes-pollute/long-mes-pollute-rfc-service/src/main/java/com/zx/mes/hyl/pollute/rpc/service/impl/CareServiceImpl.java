@@ -1,9 +1,7 @@
 package com.zx.mes.hyl.pollute.rpc.service.impl;
 
 import com.zx.mes.dao.mes.CareMapper;
-import com.zx.mes.hyl.pageModel.DataGrid;
-import com.zx.mes.hyl.pageModel.PageHelper;
-import com.zx.mes.hyl.pageModel.PropertyGrid;
+import com.zx.mes.hyl.pageModel.*;
 import com.zx.mes.hyl.pollute.service.CareServiceI;
 import com.zx.mes.model.mes.Care;
 import com.zx.mes.pageModel.mes.pollute.Pcare;
@@ -66,6 +64,25 @@ public class CareServiceImpl implements CareServiceI {
         datagrid.setTotal(careMapper.getCount(care));
 
         return datagrid;
+    }
+
+    public DataTable dataTable(Pcare pcare, DataTablePageHelper ph) {
+        DataTable dataTable=new DataTable();
+        Care care=new Care();
+        BeanUtils.copyProperties(pcare,care);
+        //com.github.pagehelper.PageHelper.startPage();
+        care.setCreatedatetime(pcare.getCreatedatetimeStart());
+        care.setModifydatetime(pcare.getCreatedatetimeEnd());
+        if (pcare.getCareTypeId()!=null){
+            care.setCaretypeId(pcare.getCareTypeId());
+        }
+        List<Care> careList=careMapper.getAllWithCareType(care);
+
+        dataTable.setData(changeModel(careList));
+        dataTable.setRecordsTotal((int) careMapper.getCount(care));
+        dataTable.setRecordsFiltered(dataTable.getRecordsTotal());
+
+        return dataTable;
     }
 
 

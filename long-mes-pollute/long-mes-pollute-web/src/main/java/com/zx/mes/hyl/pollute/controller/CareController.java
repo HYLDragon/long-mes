@@ -2,9 +2,7 @@ package com.zx.mes.hyl.pollute.controller;
 
 
 import com.zx.mes.hyl.controller.BaseController;
-import com.zx.mes.hyl.pageModel.DataGrid;
-import com.zx.mes.hyl.pageModel.Json;
-import com.zx.mes.hyl.pageModel.PageHelper;
+import com.zx.mes.hyl.pageModel.*;
 import com.zx.mes.hyl.pollute.service.CareServiceI;
 import com.zx.mes.hyl.pollute.service.CareTypeServiceI;
 import com.zx.mes.model.mes.Care;
@@ -33,11 +31,10 @@ public class CareController extends BaseController {
     @Autowired
     private CareTypeServiceI careTypeService;
 
-    @RequestMapping("/datagrid")
+    @RequestMapping("/dataTable")
     @ResponseBody
-    public DataGrid datagrid(HttpServletRequest request, Pcare pcare, PageHelper ph){
-
-        return careService.datagrid(pcare,ph);
+    public DataTable dataTable(HttpServletRequest request, Pcare pcare, DataTablePageHelper ph){
+        return careService.dataTable(pcare,ph);
     }
 
     @RequestMapping("/addPage")
