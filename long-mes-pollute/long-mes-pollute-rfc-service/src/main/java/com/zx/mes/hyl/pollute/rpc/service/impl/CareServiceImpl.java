@@ -2,6 +2,7 @@ package com.zx.mes.hyl.pollute.rpc.service.impl;
 
 import com.zx.mes.dao.mes.CareMapper;
 import com.zx.mes.hyl.pageModel.*;
+import com.zx.mes.hyl.pageModel.PageHelper;
 import com.zx.mes.hyl.pollute.service.CareServiceI;
 import com.zx.mes.model.mes.Care;
 import com.zx.mes.pageModel.mes.pollute.Pcare;
@@ -52,7 +53,7 @@ public class CareServiceImpl implements CareServiceI {
         DataGrid datagrid=new DataGrid();
         Care care=new Care();
         BeanUtils.copyProperties(pcare,care);
-        com.github.pagehelper.PageHelper.startPage(ph.getPage(),ph.getRows());
+        com.github.pagehelper.PageHelper.startPage(ph.getStart(),ph.getRows());
         care.setCreatedatetime(pcare.getCreatedatetimeStart());
         care.setModifydatetime(pcare.getCreatedatetimeEnd());
         if (pcare.getCareTypeId()!=null){
@@ -70,7 +71,10 @@ public class CareServiceImpl implements CareServiceI {
         DataTable dataTable=new DataTable();
         Care care=new Care();
         BeanUtils.copyProperties(pcare,care);
-        //com.github.pagehelper.PageHelper.startPage();
+        int pageNum=ph.getPage()/ph.getRows();
+        System.out.println("pageNum: "+pageNum);
+
+        com.github.pagehelper.PageHelper.startPage((pageNum+1) ,ph.getRows());
         care.setCreatedatetime(pcare.getCreatedatetimeStart());
         care.setModifydatetime(pcare.getCreatedatetimeEnd());
         if (pcare.getCareTypeId()!=null){

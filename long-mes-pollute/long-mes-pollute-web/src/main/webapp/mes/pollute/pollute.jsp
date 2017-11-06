@@ -58,28 +58,37 @@
                                 style=" list-style:none;display:none; position:absolute; left:80px; top:10px; background:#FFFFFF; border:1px solid #ccc; width:200px;">
                                 <li>
                                     <input type="checkbox" class="toggle-vis" data-column="2"/>
-                                    服务器名称
+                                    编号
                                 </li>
                                 <li>
                                     <input type="checkbox" class="toggle-vis" data-column="3"/>
-                                    IP
+                                    名称
                                 </li>
                                 <li>
                                     <input type="checkbox" class="toggle-vis" data-column="4"/>
-                                    CPU/内存
+                                    创建时间
                                 </li>
                                 <li>
                                     <input type="checkbox" class="toggle-vis" data-column="5"/>
-                                    数据盘大小
+                                    保养类型ID
                                 </li>
                                 <li>
                                     <input type="checkbox" class="toggle-vis" data-column="6"/>
-                                    操作系统
+                                    最后修改时间
                                 </li>
                                 <li>
                                     <input type="checkbox" class="toggle-vis" data-column="7"/>
-                                    状态
+                                    保养类型ID
                                 </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="8"/>
+                                    保养类型名称
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="toggle-vis" data-column="9"/>
+                                    保养详细说明
+                                </li>
+
                             </ul>
                         </div>
                         <div style="clear:both;"></div>
@@ -184,27 +193,33 @@
                 },
                 {
                     "data": "name",
-                    "title":"名称"
+                    "title":"名称",
+                    "defaultContent":""
                 },
                 {
                     "data": "createdatetime",
-                    "title":"创建时间"
+                    "title":"创建时间",
+                    "defaultContent":""
                 },
                 {
                     "data": "modifydatetime",
-                    "title":"最后修改时间"
+                    "title":"最后修改时间",
+                    "defaultContent":""
                 },
                 {
                     "data": "careTypeId",
-                    "title":"保养类型ID"
+                    "title":"保养类型ID",
+                    "defaultContent":""
                 },
                 {
                     "data": "careTypeName",
-                    "title":"保养类型名称"
+                    "title":"保养类型名称",
+                    "defaultContent":""
                 },
                 {
                     "data": "remark",
-                    "title":"保养详细说明"
+                    "title":"保养详细说明",
+                    "defaultContent":""
                 },
                 {
                     "data": null,
@@ -262,7 +277,7 @@
                 {
                     //   指定第最后一列
 
-                    targets: 8,
+                    targets: 9,
                     "searchable": false,
                     "orderable": false,
                     render: function(data, type, row) {
@@ -279,15 +294,24 @@
             ],//第一列排序图标改为默认
         });
 
-        table.on('order.dt search.dt',
-            function() {
-                table.column(0, {
-                    search: 'applied',
-                    order: 'applied'
-                }).nodes().each(function(cell, i) {
-                    cell.innerHTML = i + 1;
-                });
-            }).draw();
+        table.on('draw.dt',function() {
+            table.column(0, {
+                search: 'applied',
+                order: 'applied'
+            }).nodes().each(function(cell, i) {
+                //i 从0开始，所以这里先加1
+                i = i+1;
+                //服务器模式下获取分页信息，使用 DT 提供的 API 直接获取分页信息
+                var page = table.page.info();
+                //当前第几页，从0开始
+                var pageno = page.page;
+                //每页数据
+                var length = page.length;
+                //行号等于 页数*每页数据长度+行号
+                var columnIndex = (i+pageno*length);
+                cell.innerHTML = columnIndex;
+            });
+        });
         //自定义搜索
         $('.dsearch').on('keyup click', function () {
             var tsval = $(".dsearch").val()

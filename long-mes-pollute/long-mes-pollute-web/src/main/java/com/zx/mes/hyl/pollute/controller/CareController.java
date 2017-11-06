@@ -33,7 +33,11 @@ public class CareController extends BaseController {
 
     @RequestMapping("/dataTable")
     @ResponseBody
-    public DataTable dataTable(HttpServletRequest request, Pcare pcare, DataTablePageHelper ph){
+    public DataTable dataTable(HttpServletRequest request, Pcare pcare){
+        DataTablePageHelper ph=new DataTablePageHelper();
+        ph.setLength(Integer.parseInt(request.getParameter("length")));
+        ph.setPage(Integer.parseInt(request.getParameter("start")));
+        ph.setRows(Integer.parseInt(request.getParameter("length")));
         return careService.dataTable(pcare,ph);
     }
 

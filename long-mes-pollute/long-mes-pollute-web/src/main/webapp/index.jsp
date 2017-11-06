@@ -71,7 +71,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue fixed sidebar-mini ">
+<body class="hold-transition skin-blue  sidebar-mini ">
 <%--隐藏basePath值--%>
 <input id="basePath" type="hidden" value="<%=base%>" /><%--隐藏basePath值--%>
 <div class="wrapper">
