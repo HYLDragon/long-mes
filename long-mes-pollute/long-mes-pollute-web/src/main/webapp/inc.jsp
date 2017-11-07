@@ -41,6 +41,10 @@
 <script src="${basePath}/jslib/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="${basePath}/jslib/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
+<script src="${basePath}/jslib/bower_components/spin-2.1.0/jquery.spin.merge.js"></script>
+
 <script src="${basePath}/jslib/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes(首页初使化时需要) -->
 <script src="${basePath}/jslib/dist/js/demo.js"></script>
+
+<script src="${basePath}/commonJS/constant.js"></script>
