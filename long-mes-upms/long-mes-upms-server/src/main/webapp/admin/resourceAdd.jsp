@@ -10,15 +10,28 @@
 			}
 		});
 
-		$('#pid').combotree({
-			url : '${pageContext.request.contextPath}/resourceController/tree',
-			parentField : 'pid',
-			lines : true,
-			panelHeight : 'auto',
-			onLoadSuccess : function() {
-				parent.$.messager.progress('close');
-			}
-		});
+
+        $('#pid').combotree({
+            url : '${pageContext.request.contextPath}/resourceController/tree',
+            parentField : 'pid',
+            lines : true,
+            panelHeight : 'auto',
+            value : '${resource.pid}',
+            onLoadSuccess : function() {
+                parent.$.messager.progress('close');
+            }
+        });
+
+        $('#sysId').combotree({
+            url : '${pageContext.request.contextPath}/sysController/getAll',
+            valueField:'id',
+            textField:'text',
+            panelHeight : 'auto',
+            onLoadSuccess : function() {
+                $.messager.progress('close');
+            }
+        });
+
 
 		$('#form').form({
 			url : '${pageContext.request.contextPath}/resourceController/add',
@@ -73,11 +86,17 @@
 				</tr>
 				<tr>
 					<th>菜单图标</th>
-					<td colspan="3"><input id="iconCls" name="iconCls" style="width: 375px; height: 29px;" data-options="editable:false" /></td>
+					<td colspan="3"><input id="iconCls" name="iconCls" style="width: 375px; height: 29px;"
+										   data-options="editable:false" /></td>
 				</tr>
 				<tr>
 					<th>备注</th>
 					<td colspan="3"><textarea name="remark" rows="" cols="" class="span5"></textarea></td>
+				</tr>
+				<tr>
+					<th>系统ID</th>
+					<td colspan="3"><input id="sysId" name="sysId" style="width: 375px; height: 29px;"
+										   data-options="" /></td>
 				</tr>
 			</table>
 		</form>

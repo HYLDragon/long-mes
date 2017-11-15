@@ -21,14 +21,14 @@ public interface BugServiceI {
 	 *            分页帮助类
 	 * @return
 	 */
-	public DataGrid dataGrid(Bug bug, PageHelper ph);
+	 DataGrid dataGrid(Bug bug, PageHelper ph);
 
 	/**
 	 * 添加BUG
 	 * 
 	 * @param bug
 	 */
-	public void add(Bug bug);
+	void add(Bug bug);
 
 	/**
 	 * 获得BUG对象
@@ -36,14 +36,14 @@ public interface BugServiceI {
 	 * @param id
 	 * @return
 	 */
-	public Bug get(String id);
+	Bug get(String id);
 
 	/**
 	 * 修改BUG
 	 * 
 	 * @param bug
 	 */
-	public void edit(Bug bug);
+	void edit(Bug bug);
 
 	/**
 	 * 删除BUG

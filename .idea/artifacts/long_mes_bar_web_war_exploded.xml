@@ -123,6 +123,9 @@
           <element id="archive" name="long-mes-upms-dao-1.0-SNAPSHOT.jar">
             <element id="module-output" name="long-mes-upms-dao" />
           </element>
+          <element id="archive" name="long-mes-upms-common-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="long-mes-upms-common" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

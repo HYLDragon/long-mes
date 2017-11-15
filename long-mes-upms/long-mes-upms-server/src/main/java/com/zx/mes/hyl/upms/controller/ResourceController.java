@@ -53,9 +53,9 @@ public class ResourceController extends BaseController {
 	@ResponseBody
 	public List<Tree> tree(HttpSession session) {
 		SessionInfo sessionInfo = (SessionInfo) session.getAttribute(ConfigUtil.getSessionInfoName());
-		sessionInfo.setSysId(PropertiesFileUtil.getInstance().get("long-mes-sys-id"));
-		logger.info(JSON.toJSONStringWithDateFormat("系统ID:"+sessionInfo.getSysId(),"yyyy-MM-dd HH:mm:ss"));
-		return resourceService.treeByTsys(sessionInfo);
+		//sessionInfo.setSysId(PropertiesFileUtil.getInstance().get("long-mes-sys-id"));
+		//logger.info(JSON.toJSONStringWithDateFormat("系统ID:"+sessionInfo.getSysId(),"yyyy-MM-dd HH:mm:ss"));
+		return resourceService.tree(sessionInfo);
 	}
 
 	/**

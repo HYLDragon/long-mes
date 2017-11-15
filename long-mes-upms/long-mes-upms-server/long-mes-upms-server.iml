@@ -147,6 +147,7 @@
     <orderEntry type="library" name="Maven: org.jasig.cas.client:cas-client-core:3.4.1" level="project" />
     <orderEntry type="module" module-name="long-mes-upms-rfc-api" />
     <orderEntry type="module" module-name="long-mes-upms-dao" />
+    <orderEntry type="module" module-name="long-mes-upms-common" />
     <orderEntry type="module" module-name="long-mes-upms-pageModel" />
     <orderEntry type="module" module-name="long-mes-admin" />
   </component>

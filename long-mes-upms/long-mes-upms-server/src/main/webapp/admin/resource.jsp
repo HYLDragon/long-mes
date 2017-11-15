@@ -64,6 +64,16 @@
 				title : '上级资源',
 				width : 80
 			}, {
+                field : 'sysId',
+                title : '系统ID',
+                width : 150,
+                hidden : true
+            }, {
+                field : 'sysName',
+                title : '系统名称',
+                width : 80
+            }
+			, {
 				field : 'action',
 				title : '操作',
 				width : 50,
@@ -137,7 +147,7 @@
 			parent.$.modalDialog({
 				title : '编辑资源',
 				width : 500,
-				height : 300,
+				height : 330,
 				href : '${pageContext.request.contextPath}/resourceController/editPage?id=' + node.id,
 				buttons : [ {
 					text : '编辑',
@@ -155,7 +165,7 @@
 		parent.$.modalDialog({
 			title : '添加资源',
 			width : 500,
-			height : 300,
+			height : 330,
 			href : '${pageContext.request.contextPath}/resourceController/addPage',
 			buttons : [ {
 				text : '添加',

@@ -71,6 +71,11 @@ public class ResourceServiceImpl implements ResourceServiceI {
 				if (r.getTresource() != null) {
 					tree.setPid(r.getTresource().getId());
 				}
+				if (r.getTsys()!=null){
+					tree.setSysName(r.getTsys().getName());
+					tree.setSysCode(r.getTsys().getCode());
+					tree.setSysId(r.getTsys().getId());
+				}
 				tree.setText(r.getName());
 				tree.setIconCls(r.getIcon());
 				Map<String, Object> attr = new HashMap<String, Object>();
@@ -111,6 +116,11 @@ public class ResourceServiceImpl implements ResourceServiceI {
 				BeanUtils.copyProperties(r, tree);
 				if (r.getTresource() != null) {
 					tree.setPid(r.getTresource().getId());
+				}
+				if (r.getTsys()!=null){
+					tree.setSysName(r.getTsys().getName());
+					tree.setSysCode(r.getTsys().getCode());
+					tree.setSysId(r.getTsys().getId());
 				}
 				tree.setText(r.getName());
 				tree.setIconCls(r.getIcon());
@@ -197,11 +207,13 @@ public class ResourceServiceImpl implements ResourceServiceI {
 			params.put("userId", sessionInfo.getId());// 自查自己有权限的资源
 			l = resourceDao.find("select distinct t from Tresource t " +
 					"join fetch t.tresourcetype type " +
+					"join fetch t.tsys sys " +
 					"join fetch t.troles role " +
 					"join role.tusers user " +
 					"where user.id = :userId order by t.seq", params);
 		} else {
 			l = resourceDao.find("select distinct t from Tresource t " +
+					"join fetch t.tsys sys " +
 					"join fetch t.tresourcetype type order by t.seq", params);
 		}
 
@@ -213,6 +225,13 @@ public class ResourceServiceImpl implements ResourceServiceI {
 					r.setPid(t.getTresource().getId());
 					r.setPname(t.getTresource().getName());
 				}
+
+				if (t.getTsys()!=null){
+					r.setSysId(t.getTsys().getId());
+					r.setSysName(t.getTsys().getName());
+					r.setSysCode(t.getTsys().getCode());
+				}
+
 				r.setTypeId(t.getTresourcetype().getId());
 				r.setTypeName(t.getTresourcetype().getName());
 				if (t.getIcon() != null && !t.getIcon().equalsIgnoreCase("")) {
@@ -243,7 +262,7 @@ public class ResourceServiceImpl implements ResourceServiceI {
 
 		//Tsys tsys=new Tsys();
 		//tsys=sysDao.get(Tsys.class,"10002");
-		t.setTsys(sysDao.get(Tsys.class,"10002"));
+		t.setTsys(sysDao.get(Tsys.class,resource.getSysId()));
 
 		resourceDao.save(t);
 

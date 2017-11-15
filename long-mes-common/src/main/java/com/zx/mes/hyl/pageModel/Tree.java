@@ -22,6 +22,9 @@ public class Tree implements java.io.Serializable {
 	private List<Tree> children;
 	private String iconCls;
 	private String pid;
+	private String sysName;
+	private String sysCode;
+	private String sysId;
 
 	public String getId() {
 		return id;
@@ -87,4 +90,27 @@ public class Tree implements java.io.Serializable {
 		this.pid = pid;
 	}
 
+	public String getSysName() {
+		return sysName;
+	}
+
+	public void setSysName(String sysName) {
+		this.sysName = sysName;
+	}
+
+	public String getSysCode() {
+		return sysCode;
+	}
+
+	public void setSysCode(String sysCode) {
+		this.sysCode = sysCode;
+	}
+
+	public String getSysId() {
+		return sysId;
+	}
+
+	public void setSysId(String sysId) {
+		this.sysId = sysId;
+	}
 }

@@ -21,6 +21,16 @@
 			}
 		});
 
+        $('#sysId').combotree({
+            url : '${pageContext.request.contextPath}/sysController/getAll',
+            valueField:'id',
+            textField:'text',
+            panelHeight : 'auto',
+            onLoadSuccess : function() {
+                $.messager.progress('close');
+            }
+        });
+
 		$('#form').form({
 			url : '${pageContext.request.contextPath}/resourceController/edit',
 			onSubmit : function() {
@@ -75,6 +85,11 @@
 				<tr>
 					<th>菜单图标</th>
 					<td colspan="3"><input id="iconCls" name="iconCls" style="width: 375px; height: 29px;" data-options="editable:false" /></td>
+				</tr>
+				<tr>
+					<th>系统ID</th>
+					<td colspan="3"><input id="sysId" name="sysId" style="width: 375px; height: 29px;"
+										   data-options="" /></td>
 				</tr>
 				<tr>
 					<th>备注</th>

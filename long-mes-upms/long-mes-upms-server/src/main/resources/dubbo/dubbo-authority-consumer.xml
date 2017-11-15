@@ -40,6 +40,7 @@
 
 	<dubbo:reference interface="com.zx.mes.hyl.upms.service.UserServiceI" id="userServiceImpl"/>
 
+	<dubbo:reference interface="com.zx.mes.hyl.upms.service.SysServiceI" id="SysServiceImpl"/>
 	<!--<dubbo:annotation package="com.zx.mes.hyl.service"/>-->
 
 </beans>
